@@ -337,9 +337,46 @@
       .cta-actions{align-items:center}
       .how-steps{grid-template-columns:1fr}
     }
+
+    /* ── FRANCHISE BANNER ── */
+    .franchise-banner{background:var(--primary-dark);color:rgba(255,255,255,.85);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-align:center;padding:7px 16px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+    .franchise-banner a{color:var(--gold);text-decoration:none;font-weight:700}
+    .franchise-banner a:hover{text-decoration:underline}
+    .franchise-sep{opacity:.4}
+
+    /* ── REDE ECOPOWER NACIONAL ── */
+    .rede{background:var(--primary-dark);padding:80px 0}
+    .rede-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .rede-label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+    .rede-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:white;margin-bottom:16px;line-height:1.2}
+    .rede-sub{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7;margin-bottom:28px}
+    .rede-slogan{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);font-style:italic;border-left:3px solid var(--gold);padding-left:16px;margin-bottom:28px}
+    .rede-certs{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .cert-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:8px 14px;color:rgba(255,255,255,.85);font-size:.78rem;font-weight:600}
+    .cert-badge i{color:var(--gold)}
+    .rede-numbers{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .rede-num{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px;text-align:center;position:relative;overflow:hidden}
+    .rede-num::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--primary-light))}
+    .rede-num-val{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:900;color:var(--gold);line-height:1}
+    .rede-num-val sup{font-size:1rem}
+    .rede-num-desc{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:6px;line-height:1.4}
+    @media(max-width:768px){
+      .rede-inner{grid-template-columns:1fr;gap:36px}
+      .rede-numbers{grid-template-columns:1fr 1fr}
+      .franchise-banner{font-size:.68rem;gap:8px}
+    }
   </style>
 </head>
 <body>
+
+<!-- FRANCHISE BANNER -->
+<div class="franchise-banner">
+  <span>☀️ <strong>Unidade Franqueada — Araraquara / SP</strong></span>
+  <span class="franchise-sep">|</span>
+  <span>Fazemos parte da <a href="https://ecopower.com.br" target="_blank" rel="noopener">Rede EcoPower</a> — líder em energia solar no Brasil</span>
+  <span class="franchise-sep">|</span>
+  <span>410+ franqueados · 26 estados · 90.000+ projetos</span>
+</div>
 
 <!-- ╔══════════════════════════════╗
      ║     MOBILE MENU             ║
@@ -388,9 +425,9 @@
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
-    <div class="hero-badge"><i class="fa fa-star"></i>&nbsp; Integradora Autorizada EcoPower · Tecnologia WEG · Araraquara</div>
-    <h1 class="hero-title">Energia Solar Premium.<br><span>Economize até 95%</span><br>na Conta de Luz.</h1>
-    <p class="hero-subtitle">A EcoPower Araraquara projeta e instala sistemas fotovoltaicos de alto desempenho com equipamentos WEG — a multinacional brasileira mais confiável do mercado.</p>
+    <div class="hero-badge"><i class="fa fa-star"></i>&nbsp; Unidade Franqueada · Rede EcoPower Nacional · Araraquara/SP</div>
+    <h1 class="hero-title">Energia Solar de Verdade.<br><span>Economize até 95%</span><br>na Conta de Luz.</h1>
+    <p class="hero-subtitle">Somos a unidade EcoPower de Araraquara — parte da maior rede de energia solar do Brasil, com 90.000+ projetos instalados em 26 estados. Tecnologia WEG, qualidade nacional, atendimento local.</p>
     <div class="hero-actions">
       <a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento%20gratuito!" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Orçamento Gratuito</a>
       <a href="#projetos" class="btn-secondary"><i class="fa fa-images"></i> Ver Projetos</a>
@@ -422,10 +459,11 @@
      ╚══════════════════════════════╝ -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
-    <div class="trust-item"><i class="fa fa-shield-halved"></i> 25 anos de garantia nos painéis</div>
-    <div class="trust-item"><i class="fa fa-certificate"></i> Instaladores certificados</div>
+    <div class="trust-item"><i class="fa fa-trophy"></i> Great Place To Work</div>
+    <div class="trust-item"><i class="fa fa-star"></i> RA1000 · Reclame Aqui</div>
+    <div class="trust-item"><i class="fa fa-certificate"></i> Absolar Associada</div>
     <div class="trust-item"><i class="fa fa-bolt"></i> WEG — 98,4% de eficiência</div>
-    <div class="trust-item"><i class="fa fa-map-location-dot"></i> Araraquara e +20 cidades</div>
+    <div class="trust-item"><i class="fa fa-shield-halved"></i> 25 anos de garantia</div>
     <div class="trust-item"><i class="fa fa-hand-holding-dollar"></i> Financiamento facilitado</div>
   </div>
 </div>
@@ -445,31 +483,79 @@
         </div>
       </div>
       <div class="reveal-right">
-        <span class="section-tag">Quem Somos</span>
-        <h2 class="section-title">A empresa de energia solar mais confiável de Araraquara</h2>
-        <p class="section-subtitle">Integradores autorizados da rede EcoPower — a empresa de energia solar que mais cresce no Brasil. Atendemos Araraquara e mais de 20 cidades com soluções fotovoltaicas de alto desempenho e tecnologia WEG.</p>
+        <span class="section-tag">Unidade Franqueada · Araraquara/SP</span>
+        <h2 class="section-title">A força da maior rede solar do Brasil, aqui em Araraquara</h2>
+        <p class="section-subtitle">Somos a unidade EcoPower de Araraquara — integradores autorizados da rede que já instalou mais de 90.000 sistemas em todo o Brasil. Você conta com o respaldo de uma empresa nacional de referência e o atendimento próximo de quem é daqui.</p>
         <div class="about-features">
           <div class="about-feat">
             <div class="feat-icon"><i class="fa fa-award"></i></div>
             <div>
-              <h4>Rede EcoPower — líder nacional</h4>
-              <p>Fazemos parte da maior rede de energia solar do Brasil, com presença em centenas de cidades e padrão de qualidade reconhecido em todo o país.</p>
+              <h4>Rede EcoPower — 90.000+ projetos no Brasil</h4>
+              <p>Com 410+ franqueados ativos em 26 estados, a EcoPower é reconhecida como a maior e mais confiável rede de energia solar do país. Certificada como <strong>Great Place To Work</strong> e com nota máxima no Reclame Aqui (RA1000).</p>
             </div>
           </div>
           <div class="about-feat">
             <div class="feat-icon"><i class="fa fa-gears"></i></div>
             <div>
               <h4>Tecnologia WEG — 100% brasileira</h4>
-              <p>Usamos equipamentos WEG, maior multinacional industrial do Brasil, com garantia de 10 anos e assistência técnica nacional gerida por equipe própria.</p>
+              <p>Parceiros exclusivos WEG, a maior multinacional industrial do Brasil. Inversores com 98,4% de eficiência e garantia de 10 anos com assistência técnica em todo o território nacional.</p>
             </div>
           </div>
           <div class="about-feat">
-            <div class="feat-icon"><i class="fa fa-user-check"></i></div>
+            <div class="feat-icon"><i class="fa fa-map-location-dot"></i></div>
             <div>
-              <h4>Do projeto à entrega com responsabilidade</h4>
-              <p>Cuidamos de toda a homologação junto à concessionária, instalação, monitoramento e suporte pós-venda com equipe própria em Araraquara.</p>
+              <h4>Raízes em Araraquara — atendimento regional de verdade</h4>
+              <p>Nossa equipe é local. Cuidamos de toda a homologação, instalação e suporte pós-venda em Araraquara e mais de 20 cidades da região, com presença e comprometimento de quem mora aqui.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════╗
+     ║     REDE ECOPOWER NACIONAL  ║
+     ╚══════════════════════════════╝ -->
+<section class="rede">
+  <div class="container">
+    <div class="rede-inner">
+      <div class="reveal-left">
+        <div class="rede-label">Quem está por trás da EcoPower Araraquara</div>
+        <h2 class="rede-title">Uma gigante nacional.<br>Presente aqui na sua cidade.</h2>
+        <div class="rede-slogan">"Somos a energia que move o futuro.<br>Somos Eco. Somos Power."</div>
+        <p class="rede-sub">A EcoPower é a empresa de energia solar que mais cresce no Brasil. Fundada com a missão de democratizar o acesso à energia limpa, hoje está presente em 26 estados com mais de 410 unidades franqueadas e 90.000 projetos instalados — e Araraquara é uma delas.</p>
+        <div class="rede-certs">
+          <div class="cert-badge"><i class="fa fa-trophy"></i> Great Place To Work</div>
+          <div class="cert-badge"><i class="fa fa-star"></i> RA1000 · Reclame Aqui</div>
+          <div class="cert-badge"><i class="fa fa-leaf"></i> Absolar Associada</div>
+          <div class="cert-badge"><i class="fa fa-bolt"></i> Parceiro WEG</div>
+          <div class="cert-badge"><i class="fa fa-store"></i> Portal do Franchising</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="rede-numbers">
+          <div class="rede-num">
+            <div class="rede-num-val">90<sup>mil+</sup></div>
+            <div class="rede-num-desc">projetos instalados<br>em todo o Brasil</div>
+          </div>
+          <div class="rede-num">
+            <div class="rede-num-val">410<sup>+</sup></div>
+            <div class="rede-num-desc">franqueados ativos<br>no país</div>
+          </div>
+          <div class="rede-num">
+            <div class="rede-num-val">26</div>
+            <div class="rede-num-desc">estados atendidos<br>+ Distrito Federal</div>
+          </div>
+          <div class="rede-num">
+            <div class="rede-num-val">3,5<sup>mi m²</sup></div>
+            <div class="rede-num-desc">de área construída<br>com energia solar</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;text-align:center">
+          <a href="https://ecopower.com.br" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:.85rem;font-weight:700;text-decoration:none;border:1px solid rgba(244,167,10,.4);padding:10px 20px;border-radius:50px;transition:all .3s">
+            <i class="fa fa-arrow-up-right-from-square"></i> Conheça a Rede EcoPower Nacional
+          </a>
         </div>
       </div>
     </div>
@@ -607,24 +693,24 @@
     </div>
     <div class="projects-grid">
       <div class="proj-card large reveal d1">
-        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=900&q=80" alt="Projeto residencial premium energia solar Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Residência Premium — Araraquara</h4><p>22 painéis WEG · 11 kWp · Economia de R$ 800/mês</p></div></div>
+        <img src="https://images.unsplash.com/photo-1591111609988-cbb0aeeb7ae6?w=900&q=80" alt="Projeto solar em fazenda Araraquara região">
+        <div class="proj-overlay"><div class="proj-info"><h4>Fazenda Citrícola — Região de Araraquara</h4><p>60 painéis WEG · 30 kWp · Irrigação + galpão · Economia de R$ 2.800/mês</p></div></div>
       </div>
       <div class="proj-card reveal d2">
-        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Projeto rural energia solar Matão">
-        <div class="proj-overlay"><div class="proj-info"><h4>Propriedade Rural — Matão</h4><p>48 painéis · 24 kWp · Irrigação solar</p></div></div>
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Projeto residencial energia solar Araraquara">
+        <div class="proj-overlay"><div class="proj-info"><h4>Residência — Araraquara (Jd. Tabapuã)</h4><p>20 painéis WEG · 10 kWp · Conta: R$ 780 → R$ 52</p></div></div>
       </div>
       <div class="proj-card reveal d1">
-        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Projeto comercial energia solar">
-        <div class="proj-overlay"><div class="proj-info"><h4>Comércio — Américo Brasiliense</h4><p>30 painéis · 15 kWp · 100% do consumo coberto</p></div></div>
+        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Projeto comercial energia solar Matão">
+        <div class="proj-overlay"><div class="proj-info"><h4>Supermercado — Matão/SP</h4><p>80 painéis · 40 kWp · 100% do consumo · R$ 4.200/mês economizados</p></div></div>
       </div>
       <div class="proj-card reveal d2">
-        <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&q=80" alt="Projeto solar industrial Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Indústria — Araraquara</h4><p>120 painéis · 60 kWp · Redução de R$ 6.000/mês</p></div></div>
+        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Projeto rural cana solar Araraquara">
+        <div class="proj-overlay"><div class="proj-info"><h4>Propriedade Rural — Boa Esperança do Sul</h4><p>48 painéis · 24 kWp · Bombeamento solar · Retorno em 3,5 anos</p></div></div>
       </div>
       <div class="proj-card large reveal d3">
-        <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=900&q=80" alt="Condomínio energia solar Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Condomínio — Araraquara</h4><p>80 painéis WEG · 40 kWp · Economia compartilhada</p></div></div>
+        <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=900&q=80" alt="Projeto industrial solar Araraquara">
+        <div class="proj-overlay"><div class="proj-info"><h4>Indústria — Distrito Industrial de Araraquara</h4><p>160 painéis WEG · 80 kWp · Demanda própria · Economia de R$ 8.500/mês</p></div></div>
       </div>
     </div>
   </div>
@@ -867,10 +953,10 @@
           <div class="logo-icon" style="background:var(--primary-mid)">☀️</div>
           <div>
             <div style="font-weight:800;font-size:1.15rem;color:white;font-family:Montserrat,sans-serif">EcoPower</div>
-            <div style="font-size:.58rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase">Energia Solar · Araraquara</div>
+            <div style="font-size:.58rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase">Unidade Franqueada · Araraquara/SP</div>
           </div>
         </div>
-        <p>Integradores autorizados da rede EcoPower, líder em energia solar no Brasil. Projetos fotovoltaicos premium com tecnologia WEG em Araraquara e mais de 20 cidades da região.</p>
+        <p>Unidade franqueada da <a href="https://ecopower.com.br" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;font-weight:600">Rede EcoPower</a> — líder em energia solar no Brasil com 90.000+ projetos e 410+ franqueados. Atendemos Araraquara e mais de 20 cidades da região com tecnologia WEG.</p>
         <div class="social-links">
           <a href="https://www.instagram.com/ecopowerararaquara/" class="soc-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://www.facebook.com/ecopowerararaquara/" class="soc-link" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -910,7 +996,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 EcoPower Energia Solar Araraquara. Todos os direitos reservados.</p>
+      <p>© 2026 EcoPower Energia Solar Araraquara — Unidade Franqueada. Todos os direitos reservados. &nbsp;|&nbsp; <a href="https://ecopower.com.br" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">Rede EcoPower Nacional</a></p>
       <div class="footer-bot-links">
         <a href="#">Política de Privacidade</a>
         <a href="#">Termos de Uso</a>
