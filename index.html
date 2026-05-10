@@ -161,15 +161,38 @@
     .about-feat p{font-size:.82rem;color:var(--gray)}
 
     /* ── FROTA ── */
-    .frota-section{position:relative;overflow:hidden}
-    .frota-img-wrap{position:relative;height:480px}
-    .frota-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
-    .frota-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,39,37,.92) 0%,rgba(42,39,37,.7) 50%,rgba(0,0,0,.1) 100%);display:flex;align-items:center}
-    .frota-content{max-width:1200px;margin:0 auto;padding:0 24px;width:100%}
-    .frota-tag{display:inline-block;background:rgba(0,166,81,.25);color:#33DD80;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:16px;border:1px solid rgba(0,166,81,.4)}
-    .frota-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);color:white;margin-bottom:16px;font-style:italic}
-    .frota-sub{font-size:1rem;color:rgba(255,255,255,.78);max-width:520px;line-height:1.7}
-    @media(max-width:768px){.frota-img-wrap{height:340px}.frota-overlay{background:linear-gradient(180deg,rgba(42,39,37,.85) 0%,rgba(42,39,37,.6) 100%)}}
+    .frota-section{padding:100px 0 0;background:var(--off-white)}
+    .frota-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:56px}
+    .frota-panel{position:relative;overflow:hidden;height:460px;cursor:pointer}
+    .frota-panel img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease;display:block}
+    .frota-panel:hover img{transform:scale(1.05)}
+    .frota-panel-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,30,15,.95) 0%,rgba(0,0,0,.4) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:40px 44px}
+    .frota-number{font-family:'Playfair Display',serif;font-size:5rem;font-weight:700;color:#33DD80;line-height:1}
+    .frota-label{font-size:1.05rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.12em;margin:4px 0 14px}
+    .frota-slogan{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:white;font-style:italic;line-height:1.2;margin-bottom:14px}
+    .frota-panel-overlay p{color:rgba(255,255,255,.72);font-size:.88rem;max-width:380px;line-height:1.65}
+    @media(max-width:768px){.frota-grid{grid-template-columns:1fr}.frota-panel{height:320px}.frota-number{font-size:3.5rem}.frota-slogan{font-size:1.8rem}.frota-panel-overlay{padding:24px 28px}}
+
+    /* ── WEG STATUS BAR ── */
+    .weg-status-bar{display:flex;align-items:center;justify-content:center;gap:40px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);padding:28px 40px;margin:40px 0 56px;flex-wrap:wrap}
+    .weg-status-item{display:flex;align-items:center;gap:14px}
+    .weg-status-item img{height:28px;width:auto;opacity:.9}
+    .weg-status-item i{font-size:1.8rem;color:#33DD80}
+    .weg-status-item strong{display:block;font-size:.92rem;color:white;font-weight:700;line-height:1.2}
+    .weg-status-item span{font-size:.72rem;color:rgba(255,255,255,.55);display:block;margin-top:2px}
+    .weg-status-div{width:1px;height:44px;background:rgba(255,255,255,.15)}
+    .weg-stars{color:#F59E0B;font-size:1rem;letter-spacing:2px;display:block;margin-bottom:4px}
+
+    /* ── WEG PRODUCTS ── */
+    .weg-products{margin-top:52px;padding-top:44px;border-top:1px solid rgba(255,255,255,.12)}
+    .weg-products-title{font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.15em;margin-bottom:24px;text-align:center}
+    .weg-prod-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .weg-prod{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:20px 12px;text-align:center;transition:var(--t)}
+    .weg-prod:hover{background:rgba(255,255,255,.11);border-color:rgba(0,166,81,.45);transform:translateY(-4px)}
+    .weg-prod i{font-size:1.75rem;color:#33DD80;margin-bottom:10px;display:block}
+    .weg-prod strong{display:block;font-size:.78rem;font-weight:700;color:white;margin-bottom:4px;line-height:1.3}
+    .weg-prod span{font-size:.68rem;color:rgba(255,255,255,.48);line-height:1.4}
+    @media(max-width:768px){.weg-prod-grid{grid-template-columns:repeat(3,1fr)}.weg-status-bar{gap:20px;padding:20px}.weg-status-div{display:none}}
 
     /* ── SERVICES ── */
     .services{padding:100px 0;background:var(--off-white)}
@@ -569,14 +592,28 @@
 <!-- ╔══════════════════════════════╗
      ║         FROTA               ║
      ╚══════════════════════════════╝ -->
-<section class="frota-section">
-  <div class="frota-img-wrap">
-    <img src="imgs/frota-caminhoes-ecopower.jpg" alt="Frota EcoPower — Vai onde você chamar">
-    <div class="frota-overlay">
-      <div class="frota-content">
-        <span class="frota-tag">Nossa Estrutura</span>
-        <h2 class="frota-title">"Vai onde você chamar."</h2>
-        <p class="frota-sub">Uma frota completa a serviço da energia solar. Onde você estiver em nossa região, a EcoPower chega com pontualidade, profissionalismo e tecnologia WEG.</p>
+<section class="frota-section" id="frota">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Nossa Estrutura</span>
+      <h2 class="section-title">Frota e infraestrutura de ponta</h2>
+      <p class="section-subtitle">Estrutura profissional completa — do projeto à instalação e suporte técnico. Chegamos onde você precisar.</p>
+    </div>
+  </div>
+  <div class="frota-grid">
+    <div class="frota-panel reveal d1">
+      <img src="imgs/frota-carros-instalacao.jpg" alt="+230 carros de instalação EcoPower">
+      <div class="frota-panel-overlay">
+        <div class="frota-number">+230</div>
+        <div class="frota-label">Carros de Instalação</div>
+        <p>Técnicos certificados em veículos EcoPower, prontos para instalar com segurança, qualidade WEG e no prazo combinado.</p>
+      </div>
+    </div>
+    <div class="frota-panel reveal d2">
+      <img src="imgs/frota-caminhoes-ecopower.jpg" alt="Frota de caminhões EcoPower — Vai onde você chamar">
+      <div class="frota-panel-overlay">
+        <div class="frota-slogan">"Vai onde<br>você chamar."</div>
+        <p>Logística completa de entrega de equipamentos WEG até o seu endereço, com pontualidade e rastreamento em tempo real.</p>
       </div>
     </div>
   </div>
@@ -661,8 +698,42 @@
 <section class="weg" id="weg">
   <div class="container">
     <span class="section-tag reveal">Tecnologia de Ponta</span>
-    <h2 class="section-title reveal">Por que escolhemos a WEG?</h2>
-    <p class="section-subtitle reveal">A WEG é a maior multinacional industrial do Brasil e referência global em energia solar. Conheça os diferenciais que garantem o melhor retorno no seu investimento.</p>
+    <h2 class="section-title reveal">EcoPower × WEG: a parceria mais forte do Brasil</h2>
+    <p class="section-subtitle reveal">Somos o <strong style="color:#33DD80">maior parceiro comercial WEG do mundo</strong> e detentores da certificação <strong style="color:#33DD80">Integrador 5 Estrelas</strong> — o mais alto nível de excelência técnica reconhecido pela WEG.</p>
+    <div class="weg-status-bar reveal">
+      <div class="weg-status-item">
+        <img src="imgs/weg-branco.png" alt="WEG">
+        <div>
+          <span class="weg-stars">★★★★★</span>
+          <strong>Integrador 5 Estrelas WEG</strong>
+          <span>Máxima certificação técnica</span>
+        </div>
+      </div>
+      <div class="weg-status-div"></div>
+      <div class="weg-status-item">
+        <i class="fa fa-globe"></i>
+        <div>
+          <strong>Maior Parceiro Comercial WEG</strong>
+          <span>No mundo — em energia solar</span>
+        </div>
+      </div>
+      <div class="weg-status-div"></div>
+      <div class="weg-status-item">
+        <i class="fa fa-award"></i>
+        <div>
+          <strong>90.000+ Projetos WEG</strong>
+          <span>Instalados pela rede EcoPower</span>
+        </div>
+      </div>
+      <div class="weg-status-div"></div>
+      <div class="weg-status-item">
+        <i class="fa fa-shield-halved"></i>
+        <div>
+          <strong>Suporte Técnico WEG</strong>
+          <span>Assistência direta em todo o Brasil</span>
+        </div>
+      </div>
+    </div>
     <div class="weg-grid">
       <div class="weg-features">
         <div class="weg-feat reveal d1">
@@ -698,11 +769,49 @@
         </div>
       </div>
     </div>
+    <!-- Soluções WEG -->
+    <div class="weg-products reveal">
+      <div class="weg-products-title">Soluções WEG que instalamos</div>
+      <div class="weg-prod-grid">
+        <div class="weg-prod">
+          <i class="fa fa-solar-panel"></i>
+          <strong>Módulos WEG</strong>
+          <span>Bifaciais alta eficiência</span>
+        </div>
+        <div class="weg-prod">
+          <i class="fa fa-bolt"></i>
+          <strong>Inversores SIW</strong>
+          <span>98,4% eficiência</span>
+        </div>
+        <div class="weg-prod">
+          <i class="fa fa-microchip"></i>
+          <strong>Microinversores</strong>
+          <span>Monitoramento por painel</span>
+        </div>
+        <div class="weg-prod">
+          <i class="fa fa-chart-line"></i>
+          <strong>WEG Monitoring</strong>
+          <span>Gestão online 24/7</span>
+        </div>
+        <div class="weg-prod">
+          <i class="fa fa-screwdriver-wrench"></i>
+          <strong>Estruturas WEG</strong>
+          <span>Fixação certificada</span>
+        </div>
+        <div class="weg-prod">
+          <i class="fa fa-plug-circle-bolt"></i>
+          <strong>Grid Zero</strong>
+          <span>100% autoconsumo</span>
+        </div>
+      </div>
+    </div>
     <div class="weg-partner-strip reveal">
       <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" style="height:44px">
       <div style="width:1px;height:40px;background:rgba(255,255,255,.2)"></div>
       <img src="imgs/weg-branco.png" alt="WEG Solar Technology" style="height:34px">
-      <div style="color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">Parceria oficial · Tecnologia de ponta</div>
+      <div style="width:1px;height:40px;background:rgba(255,255,255,.2)"></div>
+      <img src="imgs/weg-azul.png" alt="WEG" style="height:30px;filter:brightness(0) invert(1);opacity:.7">
+      <div style="color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">Integrador 5 Estrelas · Maior Parceiro WEG do Mundo</div>
     </div>
   </div>
 </section>
