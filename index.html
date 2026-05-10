@@ -98,11 +98,12 @@
     .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:var(--t)}
     .navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:10px 0;box-shadow:0 2px 30px rgba(0,0,0,.08)}
     .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem}
-    .logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.18rem;color:white;line-height:1;letter-spacing:-.02em;transition:var(--t)}
-    .navbar.scrolled .logo-name{color:var(--primary)}
-    .logo-sub{font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+    .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav-logo-img{height:44px;width:auto;transition:var(--t)}
+    .nav-logo-dark{display:none}
+    .nav-logo-white{display:block}
+    .navbar.scrolled .nav-logo-dark{display:block}
+    .navbar.scrolled .nav-logo-white{display:none}
     .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
     .nav-links a{text-decoration:none;font-size:.86rem;font-weight:600;color:rgba(255,255,255,.9);transition:var(--t)}
     .navbar.scrolled .nav-links a{color:var(--gray-dark)}
@@ -398,11 +399,8 @@
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="#inicio" class="nav-logo">
-      <div class="logo-icon">☀️</div>
-      <div>
-        <div class="logo-name">EcoPower</div>
-        <div class="logo-sub">Energia Solar · Araraquara</div>
-      </div>
+      <img src="imgs/logo-preta.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-dark">
+      <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-white">
     </a>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
@@ -478,6 +476,7 @@
         <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Instalação de painéis solares EcoPower Araraquara" class="about-img-main">
         <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="Projeto de energia solar residencial" class="about-img-sec">
         <div class="about-badge">
+          <img src="imgs/logo-icone-verde.png" alt="EcoPower" style="width:36px;height:36px;object-fit:contain;margin-bottom:4px">
           <strong>+500</strong>
           <span>projetos concluídos<br>em Araraquara e região</span>
         </div>
@@ -590,7 +589,7 @@
         </div>
       </div>
       <div class="svc-card reveal d3">
-        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Energia solar rural Araraquara" class="svc-img">
+        <img src="imgs/proj-rural.webp" alt="Energia solar rural agronegócio EcoPower" class="svc-img">
         <div class="svc-body">
           <div class="svc-icon"><i class="fa fa-tractor"></i></div>
           <h3>Rural e Agronegócio</h3>
@@ -598,7 +597,7 @@
         </div>
       </div>
       <div class="svc-card reveal d4">
-        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Energia solar industrial Araraquara" class="svc-img">
+        <img src="imgs/proj-industrial.webp" alt="Energia solar industrial EcoPower" class="svc-img">
         <div class="svc-body">
           <div class="svc-icon"><i class="fa fa-industry"></i></div>
           <h3>Industrial</h3>
@@ -693,24 +692,24 @@
     </div>
     <div class="projects-grid">
       <div class="proj-card large reveal d1">
-        <img src="https://images.unsplash.com/photo-1591111609988-cbb0aeeb7ae6?w=900&q=80" alt="Projeto solar em fazenda Araraquara região">
-        <div class="proj-overlay"><div class="proj-info"><h4>Fazenda Citrícola — Região de Araraquara</h4><p>60 painéis WEG · 30 kWp · Irrigação + galpão · Economia de R$ 2.800/mês</p></div></div>
+        <img src="imgs/proj-hospital-amor.webp" alt="Hospital de Amor Campinas — projeto EcoPower">
+        <div class="proj-overlay"><div class="proj-info"><h4>Hospital de Amor — Campinas/SP</h4><p>Projeto institucional de grande porte · Painéis WEG em cobertura completa · EcoPower Energia Solar</p></div></div>
       </div>
       <div class="proj-card reveal d2">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Projeto residencial energia solar Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Residência — Araraquara (Jd. Tabapuã)</h4><p>20 painéis WEG · 10 kWp · Conta: R$ 780 → R$ 52</p></div></div>
+        <img src="imgs/proj-rural.webp" alt="Projeto solar agronegócio fazenda EcoPower">
+        <div class="proj-overlay"><div class="proj-info"><h4>Fazenda — Agronegócio (Interior SP)</h4><p>Energia solar em área rural · Silos e plantação · Redução total nos custos de irrigação</p></div></div>
       </div>
       <div class="proj-card reveal d1">
-        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Projeto comercial energia solar Matão">
-        <div class="proj-overlay"><div class="proj-info"><h4>Supermercado — Matão/SP</h4><p>80 painéis · 40 kWp · 100% do consumo · R$ 4.200/mês economizados</p></div></div>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Projeto residencial energia solar Araraquara">
+        <div class="proj-overlay"><div class="proj-info"><h4>Residencial — Araraquara (Jd. Tabapuã)</h4><p>20 painéis WEG · 10 kWp · Conta: R$ 780 → R$ 52/mês</p></div></div>
       </div>
       <div class="proj-card reveal d2">
-        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Projeto rural cana solar Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Propriedade Rural — Boa Esperança do Sul</h4><p>48 painéis · 24 kWp · Bombeamento solar · Retorno em 3,5 anos</p></div></div>
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Painéis solares fotovoltaicos EcoPower">
+        <div class="proj-overlay"><div class="proj-info"><h4>Comercial — Matão/SP</h4><p>50 painéis · 25 kWp · 100% do consumo coberto · R$ 3.800/mês economizados</p></div></div>
       </div>
       <div class="proj-card large reveal d3">
-        <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=900&q=80" alt="Projeto industrial solar Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Indústria — Distrito Industrial de Araraquara</h4><p>160 painéis WEG · 80 kWp · Demanda própria · Economia de R$ 8.500/mês</p></div></div>
+        <img src="imgs/proj-industrial.webp" alt="Projeto industrial solar EcoPower">
+        <div class="proj-overlay"><div class="proj-info"><h4>#MaisUmProjetoEcoPower — Industrial</h4><p>Cobertura total com painéis WEG · Grande escala · Economia superior a R$ 8.000/mês</p></div></div>
       </div>
     </div>
   </div>
@@ -949,12 +948,9 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
-          <div class="logo-icon" style="background:var(--primary-mid)">☀️</div>
-          <div>
-            <div style="font-weight:800;font-size:1.15rem;color:white;font-family:Montserrat,sans-serif">EcoPower</div>
-            <div style="font-size:.58rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase">Unidade Franqueada · Araraquara/SP</div>
-          </div>
+        <div style="margin-bottom:12px">
+          <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" style="height:48px;width:auto">
+          <div style="font-size:.62rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-top:4px">Unidade Franqueada · Araraquara/SP</div>
         </div>
         <p>Unidade franqueada da <a href="https://ecopower.com.br" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;font-weight:600">Rede EcoPower</a> — líder em energia solar no Brasil com 90.000+ projetos e 410+ franqueados. Atendemos Araraquara e mais de 20 cidades da região com tecnologia WEG.</p>
         <div class="social-links">
