@@ -95,27 +95,20 @@
     .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
     /* ── NAVBAR ── */
-    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 0;transition:var(--t)}
-    .navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:14px 0;box-shadow:0 2px 30px rgba(0,0,0,.08)}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:var(--t)}
+    .navbar.scrolled{background:rgba(42,39,37,.97);backdrop-filter:blur(20px);padding:10px 0;box-shadow:0 2px 30px rgba(0,0,0,.25)}
     .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
     .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
     .nav-logo-imgs{display:flex;flex-direction:column;gap:4px}
-    .nav-logo-img{height:auto;max-height:80px;width:auto;max-width:300px;object-fit:contain;display:block;transition:var(--t)}
+    .nav-logo-img{height:auto;max-height:110px;width:auto;max-width:340px;object-fit:contain;display:block;transition:var(--t)}
     .nav-logo-tag{font-size:.56rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1}
-    .navbar.scrolled .nav-logo-tag{color:var(--gray)}
-    .nav-logo-dark{display:none}
-    .nav-logo-white{display:block}
-    .navbar.scrolled .nav-logo-dark{display:block}
-    .navbar.scrolled .nav-logo-white{display:none}
     .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
     .nav-links a{text-decoration:none;font-size:.86rem;font-weight:600;color:rgba(255,255,255,.9);transition:var(--t)}
-    .navbar.scrolled .nav-links a{color:var(--gray-dark)}
-    .nav-links a:hover,.navbar.scrolled .nav-links a:hover{color:var(--primary-light)}
+    .nav-links a:hover{color:var(--primary-light)}
     .nav-cta{background:var(--primary)!important;color:#fff!important;padding:10px 20px!important;border-radius:50px!important;font-weight:700!important}
     .nav-cta:hover{background:var(--primary-mid)!important;transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,166,81,.35)}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
     .hamburger span{width:24px;height:2px;border-radius:2px;background:white;transition:var(--t)}
-    .navbar.scrolled .hamburger span{background:var(--primary)}
     .mobile-menu{display:none;position:fixed;inset:0;background:var(--primary-dark);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
     .mobile-menu.open{display:flex}
     .mobile-menu a{font-size:1.4rem;font-weight:700;color:white;text-decoration:none}
@@ -352,7 +345,9 @@
     .franchise-sep{opacity:.4}
 
     /* ── REDE ECOPOWER NACIONAL ── */
-    .rede{background:var(--primary-dark);padding:80px 0}
+    .rede{background:var(--primary-dark);padding:80px 0;position:relative;overflow:hidden}
+    .rede::before{content:'';position:absolute;inset:0;background:url('imgs/ecopower-balao-noite.jpg') center/cover no-repeat;opacity:.18;z-index:0}
+    .rede .container{position:relative;z-index:1}
     .rede-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
     .rede-label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
     .rede-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:white;margin-bottom:16px;line-height:1.2}
@@ -397,8 +392,7 @@
   <div class="nav-container">
     <a href="#inicio" class="nav-logo">
       <div class="nav-logo-imgs">
-        <img src="imgs/logo-preta.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-dark">
-        <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-white">
+        <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" class="nav-logo-img">
         <span class="nav-logo-tag">Unidade Franqueada · Araraquara / SP</span>
       </div>
     </a>
@@ -473,8 +467,8 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-stack reveal-left">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Instalação de painéis solares EcoPower Araraquara" class="about-img-main">
-        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="Projeto de energia solar residencial" class="about-img-sec">
+        <img src="imgs/proj-rural-grande.jpg" alt="Instalação de painéis solares EcoPower — grande porte rural" class="about-img-main">
+        <img src="imgs/proj-padaria-araraquara.jpg" alt="Projeto solar Padaria Pão Caseiro — Araraquara/SP" class="about-img-sec">
         <div class="about-badge">
           <img src="imgs/logo-icone-verde.png" alt="EcoPower" style="width:36px;height:36px;object-fit:contain;margin-bottom:4px">
           <strong>+1000</strong>
@@ -581,7 +575,7 @@
         </div>
       </div>
       <div class="svc-card reveal d2">
-        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Energia solar comercial Araraquara" class="svc-img">
+        <img src="imgs/proj-fort-atacadista.jpg" alt="Energia solar comercial — EcoPower Araraquara" class="svc-img">
         <div class="svc-body">
           <div class="svc-icon"><i class="fa fa-building"></i></div>
           <h3>Comercial</h3>
@@ -698,24 +692,24 @@
     </div>
     <div class="projects-grid">
       <div class="proj-card large reveal d1">
-        <img src="imgs/proj-hospital-amor.webp" alt="Hospital de Amor Campinas — projeto EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>Hospital de Amor — Campinas/SP</h4><p>Projeto institucional de grande porte · Painéis WEG em cobertura completa · EcoPower Energia Solar</p></div></div>
+        <img src="imgs/proj-padaria-araraquara.jpg" alt="Projeto solar Padaria Pão Caseiro Araraquara — EcoPower">
+        <div class="proj-overlay"><div class="proj-info"><h4>Padaria Pão Caseiro · Araraquara/SP</h4><p>Projeto comercial local · Cobertura total de painéis WEG · Redução de 100% na conta de energia</p></div></div>
       </div>
       <div class="proj-card reveal d2">
-        <img src="imgs/proj-rural.webp" alt="Projeto solar agronegócio fazenda EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>Fazenda — Agronegócio (Interior SP)</h4><p>Energia solar em área rural · Silos e plantação · Redução total nos custos de irrigação</p></div></div>
+        <img src="imgs/proj-fort-atacadista.jpg" alt="Fort Atacadista — projeto solar EcoPower grande porte">
+        <div class="proj-overlay"><div class="proj-info"><h4>Fort Atacadista · Grande Porte Comercial</h4><p>849 kWp · 1.348 módulos bifaciais · Geração de 101.880 kWh/mês · Grid Zero</p></div></div>
       </div>
       <div class="proj-card reveal d1">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Projeto residencial energia solar Araraquara">
-        <div class="proj-overlay"><div class="proj-info"><h4>Residencial — Araraquara (Jd. Tabapuã)</h4><p>20 painéis WEG · 10 kWp · Conta: R$ 780 → R$ 52/mês</p></div></div>
+        <img src="imgs/proj-rural-grande.jpg" alt="Fazenda solar grande porte — EcoPower agronegócio">
+        <div class="proj-overlay"><div class="proj-info"><h4>Fazenda Solar · Grande Porte Rural</h4><p>Usina fotovoltaica de solo · Alta geração para irrigação e operações rurais · Painéis WEG</p></div></div>
       </div>
       <div class="proj-card reveal d2">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Painéis solares fotovoltaicos EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>Comercial — Américo Brasiliense/SP</h4><p>50 painéis · 25 kWp · 100% do consumo coberto · R$ 3.800/mês economizados</p></div></div>
+        <img src="imgs/proj-hospital-amor.webp" alt="Hospital de Amor Campinas — projeto EcoPower">
+        <div class="proj-overlay"><div class="proj-info"><h4>Hospital de Amor · Campinas/SP</h4><p>Projeto institucional de grande porte · Painéis WEG em cobertura completa · EcoPower Energia Solar</p></div></div>
       </div>
       <div class="proj-card large reveal d3">
         <img src="imgs/proj-industrial.webp" alt="Projeto industrial solar EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>#MaisUmProjetoEcoPower — Industrial</h4><p>Cobertura total com painéis WEG · Grande escala · Economia superior a R$ 8.000/mês</p></div></div>
+        <div class="proj-overlay"><div class="proj-info"><h4>#MaisUmProjetoEcoPower · Industrial</h4><p>Cobertura total com painéis WEG · Grande escala · Economia superior a R$ 8.000/mês</p></div></div>
       </div>
     </div>
   </div>
