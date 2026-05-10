@@ -95,11 +95,14 @@
     .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
     /* ── NAVBAR ── */
-    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:var(--t)}
-    .navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:10px 0;box-shadow:0 2px 30px rgba(0,0,0,.08)}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 0;transition:var(--t)}
+    .navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:14px 0;box-shadow:0 2px 30px rgba(0,0,0,.08)}
     .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-    .nav-logo{display:flex;align-items:center;text-decoration:none}
-    .nav-logo-img{height:44px;width:auto;transition:var(--t)}
+    .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .nav-logo-imgs{display:flex;flex-direction:column;gap:3px}
+    .nav-logo-img{height:52px;width:auto;transition:var(--t)}
+    .nav-logo-tag{font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);line-height:1;padding-left:2px}
+    .navbar.scrolled .nav-logo-tag{color:var(--gray)}
     .nav-logo-dark{display:none}
     .nav-logo-white{display:block}
     .navbar.scrolled .nav-logo-dark{display:block}
@@ -370,15 +373,6 @@
 </head>
 <body>
 
-<!-- FRANCHISE BANNER -->
-<div class="franchise-banner">
-  <span>☀️ <strong>Unidade Franqueada — Araraquara / SP</strong></span>
-  <span class="franchise-sep">|</span>
-  <span>Fazemos parte da <a href="https://ecopower.com.br" target="_blank" rel="noopener">Rede EcoPower</a> — líder em energia solar no Brasil</span>
-  <span class="franchise-sep">|</span>
-  <span>410+ franqueados · 26 estados · 90.000+ projetos</span>
-</div>
-
 <!-- ╔══════════════════════════════╗
      ║     MOBILE MENU             ║
      ╚══════════════════════════════╝ -->
@@ -399,8 +393,11 @@
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="#inicio" class="nav-logo">
-      <img src="imgs/logo-preta.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-dark">
-      <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-white">
+      <div class="nav-logo-imgs">
+        <img src="imgs/logo-preta.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-dark">
+        <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" class="nav-logo-img nav-logo-white">
+        <span class="nav-logo-tag">Unidade Franqueada · Araraquara / SP</span>
+      </div>
     </a>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
@@ -758,27 +755,25 @@
     <div class="coverage-inner">
       <div class="reveal-left">
         <span class="section-tag">Área de Atuação</span>
-        <h2 class="section-title">Atendemos Araraquara e mais de 20 cidades</h2>
-        <p style="color:var(--primary-dark);font-size:.9rem;margin-top:12px;line-height:1.7">Nossa equipe está preparada para atender toda a região central de São Paulo com excelência e agilidade.</p>
+        <h2 class="section-title">Araraquara e região — 16 cidades atendidas</h2>
+        <p style="color:var(--primary-dark);font-size:.9rem;margin-top:12px;line-height:1.7">Nossa equipe atende toda a região central de São Paulo com agilidade, suporte local e a qualidade da maior rede solar do Brasil.</p>
         <div class="coverage-cities">
           <span class="city-tag"><i class="fa fa-location-dot"></i> Araraquara</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Matão</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> São Carlos</span>
           <span class="city-tag"><i class="fa fa-location-dot"></i> Américo Brasiliense</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Boa Esperança do Sul</span>
           <span class="city-tag"><i class="fa fa-location-dot"></i> Ibaté</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Rincão</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Santa Lúcia</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Guariba</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Itápolis</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Ibitinga</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Jaú</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Bariri</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Boa Esperança do Sul</span>
           <span class="city-tag"><i class="fa fa-location-dot"></i> Bocaina</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Trabiju</span>
           <span class="city-tag"><i class="fa fa-location-dot"></i> Dourado</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Ribeirão Bonito</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Santa Lúcia</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Rincão</span>
           <span class="city-tag"><i class="fa fa-location-dot"></i> Guatapará</span>
           <span class="city-tag"><i class="fa fa-location-dot"></i> Motuca</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Tabatinga</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Borborema</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Barra Bonita</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Bariri</span>
+          <span class="city-tag"><i class="fa fa-location-dot"></i> Gavião Peixoto</span>
         </div>
       </div>
       <div class="coverage-map reveal-right">
