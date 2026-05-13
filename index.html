@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- ✅ GOOGLE ANALYTICS G-YHT95RDK2X -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHT95RDK2X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YHT95RDK2X');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoPower Energia Solar Araraquara | Painéis Solares Premium com Tecnologia WEG</title>
@@ -402,6 +410,653 @@
       .franchise-banner{font-size:.68rem;gap:8px}
     }
   </style>
+<style>
+/* ================================================================
+   SEÇÃO DE VÍDEOS, MAPA, FORMULÁRIO E WHATSAPP — EcoPower
+   ================================================================ */
+
+:root {
+  --eco-green: #2ecc71;
+  --eco-green-dark: #1a8a47;
+  --eco-yellow: #f4c21b;
+  --eco-dark: #0d1117;
+  --eco-dark-2: #161b22;
+  --eco-dark-3: #1c2128;
+  --eco-text: #e6edf3;
+  --eco-text-muted: #8b949e;
+  --eco-border: rgba(46, 204, 113, 0.2);
+}
+
+/* ---- SEÇÃO VÍDEOS ---- */
+#ecopower-videos {
+  background: var(--eco-dark);
+  padding: 80px 0 60px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.videos-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 20px;
+}
+
+.videos-eyebrow {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--eco-green), var(--eco-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.videos-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--eco-text);
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.videos-title span {
+  color: var(--eco-green);
+}
+
+.videos-subtitle {
+  color: var(--eco-text-muted);
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---- ABAS ---- */
+.videos-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 24px;
+  border: 1.5px solid var(--eco-border);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--eco-text-muted);
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.tab-btn:hover {
+  border-color: var(--eco-green);
+  color: var(--eco-green);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--eco-green), var(--eco-green-dark));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(46, 204, 113, 0.35);
+}
+
+/* ---- CARROSSEL ---- */
+.videos-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.videos-track-container {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.videos-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---- CARD DE VÍDEO ---- */
+.video-card {
+  flex: 0 0 calc(33.333% - 16px);
+  background: var(--eco-dark-2);
+  border: 1px solid var(--eco-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--eco-green);
+  border-color: var(--eco-green);
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: var(--eco-dark-3);
+  overflow: hidden;
+}
+
+.video-thumbnail iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  transition: background 0.3s ease;
+}
+
+.video-card.playing .video-overlay {
+  display: none;
+}
+
+.video-card:hover .video-overlay {
+  background: rgba(0,0,0,0.1);
+}
+
+.play-btn {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--eco-green), var(--eco-green-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(46,204,113,0.5);
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover .play-btn {
+  transform: scale(1.1);
+}
+
+.play-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  margin-left: 3px;
+}
+
+.video-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.badge-institucional { background: rgba(244,194,27,0.9); color: #0d1117; }
+.badge-depoimento    { background: rgba(46,204,113,0.9); color: #0d1117; }
+.badge-seguranca     { background: rgba(52,152,219,0.9); color: #fff; }
+
+.video-info {
+  padding: 18px 20px 20px;
+}
+
+.video-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--eco-text);
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.video-desc {
+  font-size: 13px;
+  color: var(--eco-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---- CONTROLES ---- */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--eco-dark-2);
+  border: 1.5px solid var(--eco-border);
+  color: var(--eco-text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: var(--eco-green);
+  border-color: var(--eco-green);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(46,204,113,0.4);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--eco-border);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dot.active {
+  background: var(--eco-green);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ---- MODAL ---- */
+.video-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.video-modal-backdrop.open {
+  display: flex;
+  animation: fadeIn 0.2s ease;
+}
+
+.video-modal {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: var(--eco-dark-2);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--eco-border);
+  animation: scaleIn 0.25s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.video-modal-player {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-modal-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-modal-info {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.video-modal-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--eco-text);
+  margin: 0;
+}
+
+.modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--eco-dark-3);
+  border: 1px solid var(--eco-border);
+  color: var(--eco-text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+}
+
+/* ---- MAPA ---- */
+#ecopower-mapa {
+  background: var(--eco-dark-2);
+  padding: 80px 0;
+  font-family: 'Barlow', sans-serif;
+}
+
+.mapa-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.mapa-info h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--eco-text);
+  margin: 0 0 8px;
+}
+
+.mapa-info h2 span { color: var(--eco-green); }
+
+.mapa-info p {
+  color: var(--eco-text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+.mapa-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mapa-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--eco-green), var(--eco-green-dark));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.mapa-detail-text strong {
+  display: block;
+  color: var(--eco-text);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.mapa-detail-text span {
+  color: var(--eco-text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mapa-embed {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--eco-border);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.mapa-embed iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+}
+
+/* ---- FORMULÁRIO DE ORÇAMENTO ---- */
+#ecopower-contato {
+  background: var(--eco-dark);
+  padding: 80px 0;
+  font-family: 'Barlow', sans-serif;
+}
+
+.contato-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contato-container h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--eco-text);
+  margin: 0 0 12px;
+}
+
+.contato-container h2 span { color: var(--eco-green); }
+
+.contato-container p {
+  color: var(--eco-text-muted);
+  font-size: 16px;
+  margin: 0 0 40px;
+  line-height: 1.6;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--eco-text-muted);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--eco-dark-2);
+  border: 1.5px solid var(--eco-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: var(--eco-text);
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.25s ease;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--eco-text-muted);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group select,
+.form-group textarea:focus {
+  border-color: var(--eco-green);
+  box-shadow: 0 0 0 3px rgba(46,204,113,0.12);
+}
+
+.form-group select option {
+  background: var(--eco-dark-2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--eco-green), var(--eco-green-dark));
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(46,204,113,0.45);
+}
+
+.form-success {
+  display: none;
+  background: rgba(46,204,113,0.1);
+  border: 1px solid var(--eco-green);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--eco-green);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+/* ---- WHATSAPP FLUTUANTE ---- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.whatsapp-bubble {
+  background: #fff;
+  color: #1a1a1a;
+  padding: 10px 16px;
+  border-radius: 12px 12px 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  animation: float-in 0.4s ease 1.5s both;
+  font-family: 'Barlow', sans-serif;
+}
+
+.whatsapp-btn {
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: float-in 0.4s ease 1s both;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(37,211,102,0.65);
+}
+
+.whatsapp-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- RESPONSIVO NOVAS SEÇÕES ---- */
+@media (max-width: 900px) {
+  .video-card { flex: 0 0 calc(50% - 12px); }
+  .mapa-container { grid-template-columns: 1fr; }
+  .mapa-embed { order: -1; }
+}
+
+@media (max-width: 600px) {
+  .video-card { flex: 0 0 90%; }
+  .form-grid { grid-template-columns: 1fr; }
+  .videos-tabs { gap: 6px; }
+  .tab-btn { padding: 8px 16px; font-size: 13px; }
+}
+</style>
 </head>
 <body>
 
@@ -416,6 +1071,9 @@
   <a href="#weg" onclick="closeMobile()">Tecnologia WEG</a>
   <a href="#projetos" onclick="closeMobile()">Projetos</a>
   <a href="#contato" onclick="closeMobile()">Contato</a>
+  <a href="#ecopower-videos" onclick="closeMobile()">Vídeos</a>
+  <a href="#ecopower-mapa" onclick="closeMobile()">Localização</a>
+  <a href="#ecopower-contato" onclick="closeMobile()">Orçamento</a>
   <a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento%20gratuito!" target="_blank" style="color:#25D366"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </div>
 
@@ -436,6 +1094,9 @@
       <li><a href="#weg">Tecnologia WEG</a></li>
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#ecopower-videos">Vídeos</a></li>
+      <li><a href="#ecopower-mapa">Localização</a></li>
+      <li><a href="#ecopower-contato">Orçamento</a></li>
       <li><a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento%20gratuito!" class="nav-cta" target="_blank">Orçamento Grátis</a></li>
     </ul>
     <button class="hamburger" onclick="openMobile()" aria-label="Menu">
@@ -1222,5 +1883,377 @@
     );
   }
 </script>
+
+<!-- ================================================================
+     ✅ SEÇÃO VÍDEOS COM CARROSSEL POR CATEGORIAS
+     ================================================================ -->
+<section id="ecopower-videos">
+  <div class="videos-header">
+    <div class="videos-eyebrow">▶ Conteúdo EcoPower</div>
+    <h1 class="videos-title">Conheça a <span>EcoPower</span><br>em detalhes</h1>
+    <p class="videos-subtitle">Depoimentos reais, projetos realizados e tudo que você precisa saber antes de investir em energia solar.</p>
+  </div>
+
+  <!-- Abas de categoria -->
+  <div class="videos-tabs">
+    <button class="tab-btn active" onclick="filterVideos('todos')">🎬 Todos</button>
+    <button class="tab-btn" onclick="filterVideos('institucional')">🏢 Institucional</button>
+    <button class="tab-btn" onclick="filterVideos('depoimento')">⭐ Depoimentos</button>
+    <button class="tab-btn" onclick="filterVideos('seguranca')">🔒 Por que EcoPower?</button>
+  </div>
+
+  <!-- Carrossel -->
+  <div class="videos-carousel-wrapper">
+    <div class="videos-track-container">
+      <div class="videos-track" id="videosTrack"></div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <div class="carousel-controls">
+    <button class="carousel-btn" id="btnPrev" onclick="slideCarousel(-1)">&#8592;</button>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <button class="carousel-btn" id="btnNext" onclick="slideCarousel(1)">&#8594;</button>
+  </div>
+</section>
+
+<!-- Modal de vídeo -->
+<div class="video-modal-backdrop" id="videoModal" onclick="closeModal(event)">
+  <div class="video-modal">
+    <div class="video-modal-player">
+      <iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="video-modal-info">
+      <p class="video-modal-title" id="modalTitle"></p>
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     ✅ SEÇÃO GOOGLE MAPS + INFORMAÇÕES DE CONTATO
+     ================================================================ -->
+<section id="ecopower-mapa">
+  <div class="mapa-container">
+    <div class="mapa-info">
+      <div class="videos-eyebrow">📍 Onde Estamos</div>
+      <h2>Venha nos <span>visitar</span></h2>
+      <p>Nossa equipe está pronta para atender você presencialmente e apresentar as melhores soluções em energia solar para sua necessidade.</p>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon">📍</div>
+        <div class="mapa-detail-text">
+          <strong>Endereço</strong>
+          <span>Av. Octaviano de Arruda Campos, 921<br>Jardim Tabapuã — Araraquara/SP</span>
+        </div>
+      </div>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon">📞</div>
+        <div class="mapa-detail-text">
+          <strong>Telefone / WhatsApp</strong>
+          <span>(16) 3357-4701</span>
+        </div>
+      </div>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon">✉️</div>
+        <div class="mapa-detail-text">
+          <strong>E-mail</strong>
+          <span>flavio.araraquara@ecopowerfranquia.com.br</span>
+        </div>
+      </div>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon">🕐</div>
+        <div class="mapa-detail-text">
+          <strong>Horário de Atendimento</strong>
+          <span>Seg–Sex: 8h às 18h | Sáb: 8h às 12h</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mapa-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.5!2d-48.1759!3d-21.7939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.+Octaviano+de+Arruda+Campos%2C+921+-+Jardim+Tabapuã%2C+Araraquara+-+SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização EcoPower Araraquara">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     ✅ SEÇÃO FORMULÁRIO DE CONTATO (Formspree)
+     ================================================================ -->
+<section id="ecopower-contato">
+  <div class="contato-container">
+    <div class="videos-eyebrow">📩 Fale Conosco</div>
+    <h2>Solicite seu <span>orçamento grátis</span></h2>
+    <p>Preencha o formulário e nossa equipe entrará em contato em até 24 horas com a melhor proposta para você.</p>
+
+    <form id="contatoForm" action="https://formspree.io/f/xzdoqpqz" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="tel" name="whatsapp" placeholder="(16) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" name="email" placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label>Tipo de projeto</label>
+          <select name="tipo">
+            <option value="">Selecione...</option>
+            <option>Residencial</option>
+            <option>Comercial</option>
+            <option>Rural / Agronegócio</option>
+            <option>Industrial</option>
+            <option>Moto Elétrica</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Mensagem (opcional)</label>
+          <textarea name="mensagem" placeholder="Conte um pouco sobre seu projeto ou dúvida..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">⚡ Quero meu orçamento gratuito</button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      ✅ Mensagem enviada! Nossa equipe entrará em contato em breve.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     ✅ BOTÃO WHATSAPP FLUTUANTE
+     ================================================================ -->
+<div class="whatsapp-float">
+  <div class="whatsapp-bubble">💬 Fale agora pelo WhatsApp!</div>
+  <a class="whatsapp-btn"
+     href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento!"
+     target="_blank"
+     rel="noopener"
+     title="Falar no WhatsApp"
+     onclick="gtag('event', 'whatsapp_click', {'event_category': 'CTA', 'event_label': 'Floating Button'})">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ================================================================
+     JAVASCRIPT — Carrossel de vídeos e formulário Formspree
+     ================================================================ -->
+<script>
+// ---- DADOS DOS VÍDEOS ----
+const videos = [
+  {
+    id: 'OALp_csD7FY',
+    title: 'Por que ser cliente EcoPower?',
+    desc: 'Entenda os diferenciais e garantias de quem escolhe a EcoPower.',
+    categoria: 'institucional',
+    badge: 'Institucional'
+  },
+  {
+    id: 'zs8D7nVAjPA',
+    title: 'Depoimento Iquegami — Grid Zero',
+    desc: 'Cliente comercial conta sua experiência com o sistema Grid Zero.',
+    categoria: 'depoimento',
+    badge: 'Depoimento'
+  },
+  {
+    id: 'qhWwEKOynus',
+    title: 'Por que uma moto elétrica Horwin/EcoPower?',
+    desc: 'Conheça as vantagens da mobilidade elétrica com a EcoPower.',
+    categoria: 'institucional',
+    badge: 'Institucional'
+  },
+  {
+    id: 'NYscuw7E8IE',
+    title: 'Depoimento Industrial — Vidara do Brasil',
+    desc: 'Grande projeto industrial com resultados expressivos de economia.',
+    categoria: 'depoimento',
+    badge: 'Depoimento'
+  },
+  {
+    id: 'Zebvg5X1PSQ',
+    title: 'Depoimento Cliente Residencial',
+    desc: 'Família conta como reduziu a conta de luz em até 90%.',
+    categoria: 'depoimento',
+    badge: 'Depoimento'
+  },
+  {
+    id: 'A0sUnxDDq-c',
+    title: 'Projeto Rural — Depoimento Pecuária BR',
+    desc: 'Como a energia solar transformou a produção no campo.',
+    categoria: 'depoimento',
+    badge: 'Depoimento'
+  },
+  {
+    id: 'BwE8lt2mNgU',
+    title: 'Patrocinadora Oficial do Rodeio de Barretos',
+    desc: 'EcoPower presente no maior evento do agronegócio do Brasil.',
+    categoria: 'institucional',
+    badge: 'Institucional'
+  },
+  {
+    id: 'OALp_csD7FY',
+    title: 'Segurança em comprar com a EcoPower',
+    desc: 'Garantias, certificações e processo transparente de ponta a ponta.',
+    categoria: 'seguranca',
+    badge: 'Por que EcoPower?'
+  }
+];
+
+let currentFilter = 'todos';
+let currentIndex = 0;
+let filtered = [];
+let cardsPerView = 3;
+
+function getCardsPerView() {
+  if (window.innerWidth <= 600) return 1;
+  if (window.innerWidth <= 900) return 2;
+  return 3;
+}
+
+function filterVideos(cat) {
+  currentFilter = cat;
+  currentIndex = 0;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderCarousel();
+}
+
+function renderCarousel() {
+  cardsPerView = getCardsPerView();
+  filtered = currentFilter === 'todos' ? videos : videos.filter(v => v.categoria === currentFilter);
+
+  const track = document.getElementById('videosTrack');
+  track.innerHTML = filtered.map((v, i) => `
+    <div class="video-card" onclick="openModal('${v.id}', '${v.title.replace(/'/g,"\\'")}')">
+      <div class="video-thumbnail">
+        <iframe src="https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1"
+                title="${v.title}" loading="lazy" allowfullscreen></iframe>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <span class="video-badge badge-${v.categoria}">${v.badge}</span>
+      </div>
+      <div class="video-info">
+        <p class="video-title">${v.title}</p>
+        <p class="video-desc">${v.desc}</p>
+      </div>
+    </div>
+  `).join('');
+
+  updateCarouselPosition();
+  renderDots();
+  updateButtons();
+}
+
+function updateCarouselPosition() {
+  const cardEl = document.querySelector('.video-card');
+  if (!cardEl) return;
+  const cardW = cardEl.offsetWidth + 24;
+  document.getElementById('videosTrack').style.transform = `translateX(-${currentIndex * cardW}px)`;
+}
+
+function slideCarousel(dir) {
+  cardsPerView = getCardsPerView();
+  const maxIndex = Math.max(0, filtered.length - cardsPerView);
+  currentIndex = Math.min(maxIndex, Math.max(0, currentIndex + dir));
+  updateCarouselPosition();
+  renderDots();
+  updateButtons();
+}
+
+function renderDots() {
+  cardsPerView = getCardsPerView();
+  const total = Math.max(1, filtered.length - cardsPerView + 1);
+  const dotsEl = document.getElementById('carouselDots');
+  dotsEl.innerHTML = Array.from({length: total}, (_, i) =>
+    `<div class="dot ${i === currentIndex ? 'active' : ''}" onclick="goToSlide(${i})"></div>`
+  ).join('');
+}
+
+function goToSlide(i) {
+  currentIndex = i;
+  updateCarouselPosition();
+  renderDots();
+  updateButtons();
+}
+
+function updateButtons() {
+  cardsPerView = getCardsPerView();
+  document.getElementById('btnPrev').disabled = currentIndex === 0;
+  document.getElementById('btnNext').disabled = currentIndex >= filtered.length - cardsPerView;
+}
+
+function openModal(videoId, title) {
+  document.getElementById('modalIframe').src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('videoModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  gtag('event', 'video_play', {'event_category': 'Videos', 'event_label': title});
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('videoModal')) closeModalBtn();
+}
+
+function closeModalBtn() {
+  document.getElementById('videoModal').classList.remove('open');
+  document.getElementById('modalIframe').src = '';
+  document.body.style.overflow = '';
+}
+
+// Formulário Formspree
+document.getElementById('contatoForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-submit');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      this.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      gtag('event', 'form_submit', {'event_category': 'Lead', 'event_label': 'Contato Orcamento'});
+    } else {
+      btn.textContent = '⚡ Quero meu orçamento gratuito';
+      btn.disabled = false;
+      alert('Erro ao enviar. Tente novamente.');
+    }
+  } catch {
+    btn.textContent = '⚡ Quero meu orçamento gratuito';
+    btn.disabled = false;
+    alert('Erro ao enviar. Tente novamente.');
+  }
+});
+
+// Fechar modal com ESC
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalBtn(); });
+
+// Responsivo
+window.addEventListener('resize', () => { renderCarousel(); });
+
+// Inicializa carrossel
+renderCarousel();
+</script>
+
 </body>
 </html>
