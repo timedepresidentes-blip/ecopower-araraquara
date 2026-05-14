@@ -113,7 +113,7 @@
     .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
     .nav-links a{text-decoration:none;font-size:.86rem;font-weight:600;color:rgba(255,255,255,.9);transition:var(--t)}
     .nav-links a:hover{color:var(--primary-light)}
-    .nav-cta{background:var(--primary)!important;color:#fff!important;padding:10px 20px!important;border-radius:50px!important;font-weight:700!important}
+    .nav-cta{background:var(--primary)!important;color:#fff!important;padding:10px 20px!important;border-radius:50px!important;font-weight:700!important;white-space:nowrap!important}
     .nav-cta:hover{background:var(--primary-mid)!important;transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,166,81,.35)}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
     .hamburger span{width:24px;height:2px;border-radius:2px;background:white;transition:var(--t)}
@@ -125,10 +125,8 @@
 
     /* ── HERO ── */
     .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;overflow:hidden;transform:scale(1.06)}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1}
-    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+    #hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    .hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
     .particle{position:absolute;border-radius:50%;background:var(--primary);opacity:.35;animation:fp linear infinite}
     @keyframes fp{0%{transform:translateY(100vh);opacity:0}10%{opacity:.55}90%{opacity:.55}100%{transform:translateY(-80px);opacity:0}}
     .hero-content{position:relative;z-index:10;max-width:1200px;margin:0 auto;padding:128px 24px 80px;width:100%}
@@ -245,18 +243,28 @@
     .weg-partner-strip img{height:36px;width:auto;object-fit:contain;opacity:.85;transition:var(--t)}
     .weg-partner-strip img:hover{opacity:1}
 
-    /* ── PROJECTS ── */
+    /* ── PROJECTS CAROUSEL ── */
     .projects{padding:100px 0;background:var(--off-white)}
-    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
-    .proj-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer}
-    .proj-card.large{grid-column:span 2}
-    .proj-card img{width:100%;height:280px;object-fit:cover;transition:transform .6s ease;display:block}
-    .proj-card.large img{height:360px}
+    .proj-carousel-container{position:relative;margin-top:48px;padding:0 28px}
+    .proj-carousel-overflow{overflow:hidden}
+    .proj-track{display:flex;gap:18px;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+    .proj-card{flex:0 0 calc(33.333% - 12px);position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;flex-shrink:0}
+    .proj-card img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .6s ease}
     .proj-card:hover img{transform:scale(1.06)}
     .proj-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,43,30,.9) 0%,transparent 55%);display:flex;align-items:flex-end;padding:24px;opacity:0;transition:opacity .4s}
     .proj-card:hover .proj-overlay{opacity:1}
     .proj-info h4{font-family:'Montserrat',sans-serif;color:white;font-size:.98rem;font-weight:700;margin-bottom:4px}
     .proj-info p{color:#33DD80;font-size:.78rem;font-weight:600}
+    .proj-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:44px;height:44px;border-radius:50%;background:white;border:none;box-shadow:0 4px 16px rgba(0,0,0,.15);cursor:pointer;font-size:1.1rem;color:var(--primary-dark);transition:all .25s ease;display:flex;align-items:center;justify-content:center}
+    .proj-arrow:hover:not(:disabled){background:var(--primary);color:white;box-shadow:0 8px 24px rgba(0,166,81,.4)}
+    .proj-arrow:disabled{opacity:.3;cursor:not-allowed}
+    .proj-arrow-prev{left:0}
+    .proj-arrow-next{right:0}
+    .proj-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+    .proj-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-light);cursor:pointer;transition:all .25s ease;border:none;padding:0}
+    .proj-dot.active{background:var(--primary);width:24px;border-radius:4px}
+    @media(max-width:900px){.proj-card{flex:0 0 calc(50% - 9px)}}
+    @media(max-width:600px){.proj-card{flex:0 0 100%}}
 
     /* ── HOW ── */
     .how{padding:100px 0;background:white}
@@ -389,7 +397,7 @@
 
     /* ── REDE ECOPOWER NACIONAL ── */
     .rede{background:var(--primary-dark);padding:80px 0;position:relative;overflow:hidden}
-    .rede::before{content:'';position:absolute;inset:0;background:url('imgs/ecopower-balao-dia.jpg') center 20%/80% auto no-repeat;opacity:.25;z-index:0}
+    .rede::before{content:'';position:absolute;inset:0;background:url('balao-ecopower.jpg') center 20%/80% auto no-repeat;opacity:.25;z-index:0}
     .rede .container{position:relative;z-index:1}
     .rede-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
     .rede-label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
@@ -1092,8 +1100,7 @@
     <a href="#inicio" class="nav-logo">
       <div class="nav-logo-imgs">
         <img src="imgs/logo-branca.png" alt="EcoPower Energia Solar" class="nav-logo-img">
-        <span class="nav-logo-tag">Unidade Franqueada · Araraquara / SP</span>
-      </div>
+        </div>
     </a>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
@@ -1116,11 +1123,10 @@
      ║           HERO              ║
      ╚══════════════════════════════╝ -->
 <section class="hero" id="inicio">
-  <div class="hero-bg" id="heroBg">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="hero-bg.mp4" type="video/mp4">
-    </video>
-  </div>
+  <video autoplay muted loop playsinline id="hero-video">
+    <source src="hero-bg.mp4" type="video/mp4">
+  </video>
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1;"></div>
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
     <div class="hero-badge"><i class="fa fa-star"></i>&nbsp; Unidade Franqueada · Rede EcoPower Nacional · Araraquara/SP</div>
@@ -1546,28 +1552,35 @@
       <h2 class="section-title">Projetos que transformam vidas</h2>
       <p class="section-subtitle">Confira projetos reais em Araraquara e região — cada entrega com precisão, qualidade e tecnologia WEG.</p>
     </div>
-    <div class="projects-grid">
-      <div class="proj-card large reveal d1">
-        <img src="imgs/proj-padaria-araraquara.jpg" alt="Projeto solar Padaria Pão Caseiro Araraquara — EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>Padaria Pão Caseiro · Araraquara/SP</h4><p>Projeto comercial local · Cobertura total de painéis WEG · Redução de 100% na conta de energia</p></div></div>
+    <div class="proj-carousel-container">
+      <button class="proj-arrow proj-arrow-prev" id="projPrev" onclick="projSlide(-1)">&#8592;</button>
+      <div class="proj-carousel-overflow">
+        <div class="proj-track" id="projTrack">
+          <div class="proj-card reveal d1">
+            <img src="imgs/proj-padaria-araraquara.jpg" alt="Projeto solar Padaria Pão Caseiro Araraquara — EcoPower">
+            <div class="proj-overlay"><div class="proj-info"><h4>Padaria Pão Caseiro · Araraquara/SP</h4><p>Projeto comercial local · Cobertura total de painéis WEG · Redução de 100% na conta de energia</p></div></div>
+          </div>
+          <div class="proj-card reveal d2">
+            <img src="imgs/proj-fort-atacadista.jpg" alt="Fort Atacadista — projeto solar EcoPower grande porte">
+            <div class="proj-overlay"><div class="proj-info"><h4>Fort Atacadista · Grande Porte Comercial</h4><p>849 kWp · 1.348 módulos bifaciais · Geração de 101.880 kWh/mês · Grid Zero</p></div></div>
+          </div>
+          <div class="proj-card reveal d3">
+            <img src="imgs/proj-rural-grande.jpg" alt="Fazenda solar grande porte — EcoPower agronegócio">
+            <div class="proj-overlay"><div class="proj-info"><h4>Fazenda Solar · Grande Porte Rural</h4><p>Usina fotovoltaica de solo · Alta geração para irrigação e operações rurais · Painéis WEG</p></div></div>
+          </div>
+          <div class="proj-card reveal d4">
+            <img src="imgs/proj-hospital-amor.webp" alt="Hospital de Amor Campinas — projeto EcoPower">
+            <div class="proj-overlay"><div class="proj-info"><h4>Hospital de Amor · Campinas/SP</h4><p>Projeto institucional de grande porte · Painéis WEG em cobertura completa · EcoPower Energia Solar</p></div></div>
+          </div>
+          <div class="proj-card reveal d1">
+            <img src="imgs/proj-industrial.webp" alt="Projeto industrial solar EcoPower">
+            <div class="proj-overlay"><div class="proj-info"><h4>#MaisUmProjetoEcoPower · Industrial</h4><p>Cobertura total com painéis WEG · Grande escala · Economia superior a R$ 8.000/mês</p></div></div>
+          </div>
+        </div>
       </div>
-      <div class="proj-card reveal d2">
-        <img src="imgs/proj-fort-atacadista.jpg" alt="Fort Atacadista — projeto solar EcoPower grande porte">
-        <div class="proj-overlay"><div class="proj-info"><h4>Fort Atacadista · Grande Porte Comercial</h4><p>849 kWp · 1.348 módulos bifaciais · Geração de 101.880 kWh/mês · Grid Zero</p></div></div>
-      </div>
-      <div class="proj-card reveal d1">
-        <img src="imgs/proj-rural-grande.jpg" alt="Fazenda solar grande porte — EcoPower agronegócio">
-        <div class="proj-overlay"><div class="proj-info"><h4>Fazenda Solar · Grande Porte Rural</h4><p>Usina fotovoltaica de solo · Alta geração para irrigação e operações rurais · Painéis WEG</p></div></div>
-      </div>
-      <div class="proj-card reveal d2">
-        <img src="imgs/proj-hospital-amor.webp" alt="Hospital de Amor Campinas — projeto EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>Hospital de Amor · Campinas/SP</h4><p>Projeto institucional de grande porte · Painéis WEG em cobertura completa · EcoPower Energia Solar</p></div></div>
-      </div>
-      <div class="proj-card large reveal d3">
-        <img src="imgs/proj-industrial.webp" alt="Projeto industrial solar EcoPower">
-        <div class="proj-overlay"><div class="proj-info"><h4>#MaisUmProjetoEcoPower · Industrial</h4><p>Cobertura total com painéis WEG · Grande escala · Economia superior a R$ 8.000/mês</p></div></div>
-      </div>
+      <button class="proj-arrow proj-arrow-next" id="projNext" onclick="projSlide(1)">&#8594;</button>
     </div>
+    <div class="proj-dots" id="projDots"></div>
   </div>
 </section>
 
@@ -1883,12 +1896,6 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
 
-  /* ── Hero parallax ── */
-  const heroBg = document.getElementById('heroBg');
-  window.addEventListener('scroll', () => {
-    heroBg.style.transform = `scale(1.06) translateY(${window.scrollY * 0.28}px)`;
-  }, { passive: true });
-
   /* ── Floating particles ── */
   const pc = document.getElementById('particles');
   for (let i = 0; i < 22; i++) {
@@ -1897,6 +1904,66 @@
     p.style.cssText = `left:${Math.random()*100}%;width:${2+Math.random()*4}px;height:${2+Math.random()*4}px;animation-duration:${8+Math.random()*12}s;animation-delay:${Math.random()*10}s`;
     pc.appendChild(p);
   }
+
+  /* ── Carrossel de projetos ── */
+  const projTrack = document.getElementById('projTrack');
+  const projDots  = document.getElementById('projDots');
+  const projPrev  = document.getElementById('projPrev');
+  const projNext  = document.getElementById('projNext');
+  let projIndex = 0;
+  let projAutoPlay;
+
+  function projGetPerView() {
+    if (window.innerWidth <= 600) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function projUpdate() {
+    const cards = projTrack.querySelectorAll('.proj-card');
+    const perView = projGetPerView();
+    const maxIndex = Math.max(0, cards.length - perView);
+    projIndex = Math.min(projIndex, maxIndex);
+    const cardEl = projTrack.querySelector('.proj-card');
+    if (!cardEl) return;
+    const cardW = cardEl.offsetWidth + 18;
+    projTrack.style.transform = `translateX(-${projIndex * cardW}px)`;
+    projDots.innerHTML = '';
+    for (let i = 0; i <= maxIndex; i++) {
+      const d = document.createElement('button');
+      d.className = 'proj-dot' + (i === projIndex ? ' active' : '');
+      d.onclick = () => { projIndex = i; projUpdate(); };
+      projDots.appendChild(d);
+    }
+    projPrev.disabled = projIndex === 0;
+    projNext.disabled = projIndex >= maxIndex;
+  }
+
+  function projSlide(dir) {
+    const cards = projTrack.querySelectorAll('.proj-card');
+    const maxIndex = Math.max(0, cards.length - projGetPerView());
+    projIndex = Math.min(maxIndex, Math.max(0, projIndex + dir));
+    projUpdate();
+  }
+
+  function projStartAuto() {
+    projAutoPlay = setInterval(() => {
+      const cards = projTrack.querySelectorAll('.proj-card');
+      const maxIndex = Math.max(0, cards.length - projGetPerView());
+      projIndex = projIndex >= maxIndex ? 0 : projIndex + 1;
+      projUpdate();
+    }, 4000);
+  }
+
+  const projContainer = document.querySelector('.proj-carousel-container');
+  if (projContainer) {
+    projContainer.addEventListener('mouseenter', () => clearInterval(projAutoPlay));
+    projContainer.addEventListener('mouseleave', projStartAuto);
+  }
+
+  projUpdate();
+  projStartAuto();
+  window.addEventListener('resize', projUpdate);
 
   /* ── Contact form → WhatsApp redirect ── */
   function submitForm(e) {
