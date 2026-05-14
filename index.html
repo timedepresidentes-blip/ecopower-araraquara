@@ -169,8 +169,8 @@
 
     /* ── FROTA ── */
     .frota-section{padding:100px 0 0;background:var(--off-white)}
-    .frota-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:56px}
-    .frota-panel{position:relative;overflow:hidden;height:460px;cursor:pointer}
+    .frota-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;gap:16px}
+    .frota-panel{position:relative;overflow:hidden;height:460px;cursor:pointer;border-radius:12px}
     .frota-panel img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease;display:block}
     .frota-panel:hover img{transform:scale(1.05)}
     .frota-panel-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,30,15,.95) 0%,rgba(0,0,0,.4) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:40px 44px}
@@ -418,6 +418,29 @@
       .rede-numbers{grid-template-columns:1fr 1fr}
       .franchise-banner{font-size:.68rem;gap:8px}
     }
+
+    /* ── MOBILIDADE ELÉTRICA HORWIN ── */
+    .mobilidade{background:var(--primary-dark);padding:100px 0;position:relative;overflow:hidden}
+    .mobilidade::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(0,166,81,.1) 0%,transparent 60%);pointer-events:none}
+    .mobilidade .container{position:relative;z-index:1}
+    .mobilidade .section-tag{color:var(--gold)}
+    .mobilidade .section-title{color:white}
+    .mobilidade .section-subtitle{color:rgba(255,255,255,.7)}
+    .mobilidade-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;margin-top:64px}
+    .mobilidade-desc{color:rgba(255,255,255,.75);font-size:.95rem;line-height:1.75;margin-bottom:36px}
+    .mobilidade-beneficios{list-style:none;padding:0;margin:0 0 40px;display:flex;flex-direction:column;gap:14px}
+    .mobilidade-beneficios li{display:flex;align-items:flex-start;gap:14px;color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.55}
+    .mobilidade-beneficios li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:7px}
+    .mobilidade-modelos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .modelo-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);overflow:hidden;transition:all .3s ease}
+    .modelo-card:hover{transform:translateY(-4px);border-color:rgba(0,166,81,.5);box-shadow:0 12px 32px rgba(0,166,81,.15)}
+    .modelo-card img{width:100%;height:175px;object-fit:cover;object-position:center;display:block;background:#071a0d}
+    .modelo-card-info{padding:16px 18px}
+    .modelo-card-nome{font-weight:700;font-size:1rem;color:white;margin-bottom:4px}
+    .modelo-card-spec{font-size:.75rem;color:var(--primary);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+    .modelo-card-desc{font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.5}
+    @media(max-width:1024px){.mobilidade-inner{grid-template-columns:1fr;gap:48px}}
+    @media(max-width:600px){.mobilidade-modelos{grid-template-columns:1fr}}
   </style>
 <style>
 /* ================================================================
@@ -1335,6 +1358,65 @@
       <div class="frota-panel-overlay">
         <div class="frota-slogan">"Vai onde<br>você chamar."</div>
         <p>Logística completa de entrega de equipamentos WEG até o seu endereço, com pontualidade e rastreamento em tempo real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════╗
+     ║   MOBILIDADE ELÉTRICA       ║
+     ╚══════════════════════════════╝ -->
+<section class="mobilidade" id="mobilidade">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Mobilidade Elétrica</span>
+      <h2 class="section-title">Mobilidade Elétrica Horwin</h2>
+      <p class="section-subtitle">Zero combustível, zero emissão, zero manutenção pesada — a nova era da mobilidade urbana chegou em Araraquara.</p>
+    </div>
+    <div class="mobilidade-inner">
+      <div class="mobilidade-text reveal">
+        <p class="mobilidade-desc">A EcoPower Araraquara é revendedora oficial da linha Horwin — a marca europeia de motocicletas elétricas que une design sofisticado, tecnologia de ponta e custo operacional até 85% menor que veículos a combustão. Com modelos para uso urbano e misto, a Horwin redefine o que significa andar de moto no Brasil.</p>
+        <ul class="mobilidade-beneficios">
+          <li>Custo de apenas R$ 2,52 por 100 km — contra R$ 16,00 de uma moto a combustão</li>
+          <li>Zero emissão de CO₂ e operação silenciosa no trânsito urbano</li>
+          <li>Bateria removível com recarga doméstica completa em até 4,5 horas</li>
+          <li>Design premiado Red Dot Award e tecnologia de origem europeia</li>
+        </ul>
+        <a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Tenho%20interesse%20nas%20motos%20el%C3%A9tricas%20Horwin%20da%20EcoPower" class="btn-primary" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Quero saber mais</a>
+      </div>
+      <div class="mobilidade-modelos reveal-right">
+        <div class="modelo-card">
+          <img src="https://horwin.com.br/wp-content/uploads/2023/08/EK1-Ankunder-1.jpg" alt="Horwin EK1 — scooter elétrica urbana EcoPower" loading="lazy">
+          <div class="modelo-card-info">
+            <div class="modelo-card-nome">Horwin EK1</div>
+            <div class="modelo-card-spec">até 83 km · 45 km/h · L1e</div>
+            <div class="modelo-card-desc">Scooter urbana compacta para o dia a dia — silenciosa, econômica e de baixíssima manutenção.</div>
+          </div>
+        </div>
+        <div class="modelo-card">
+          <img src="https://horwin.com.br/wp-content/uploads/2023/08/EK3-schwarz-Ankuender-1.jpg" alt="Horwin EK3 — scooter elétrica Red Dot Award EcoPower" loading="lazy">
+          <div class="modelo-card-info">
+            <div class="modelo-card-nome">Horwin EK3</div>
+            <div class="modelo-card-spec">até 150 km · 95 km/h · Red Dot 2021</div>
+            <div class="modelo-card-desc">Premiada com o Red Dot Design Award — velocidade real com autonomia para percursos longos.</div>
+          </div>
+        </div>
+        <div class="modelo-card">
+          <img src="https://horwin.com.br/wp-content/uploads/2023/08/SK1-Ankuender-1.jpg" alt="Horwin SK1 — moto elétrica esportiva EcoPower" loading="lazy">
+          <div class="modelo-card-info">
+            <div class="modelo-card-nome">Horwin SK1</div>
+            <div class="modelo-card-spec">até 96 km · 45 km/h · L1e</div>
+            <div class="modelo-card-desc">Design esportivo e angular — leve, ágil e perfeitamente dimensionada para a mobilidade urbana.</div>
+          </div>
+        </div>
+        <div class="modelo-card">
+          <img src="https://horwin.com.br/wp-content/uploads/2023/09/SK3-Farben2022-blau-1-1024x640.png" alt="Horwin SK3 — moto elétrica L3e EcoPower" loading="lazy">
+          <div class="modelo-card-info">
+            <div class="modelo-card-nome">Horwin SK3</div>
+            <div class="modelo-card-spec">até 158 km · 90 km/h · L3e</div>
+            <div class="modelo-card-desc">A mais potente da linha — motor 6,3 kW e categoria L3e para quem exige performance e sustentabilidade.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
