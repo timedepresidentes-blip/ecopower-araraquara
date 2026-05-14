@@ -125,8 +125,9 @@
 
     /* ── HERO ── */
     .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80') center/cover;transform:scale(1.06)}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(42,39,37,.97) 0%,rgba(61,57,53,.92) 50%,rgba(0,166,81,.28) 100%)}
+    .hero-bg{position:absolute;inset:0;overflow:hidden;transform:scale(1.06)}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
     .particle{position:absolute;border-radius:50%;background:var(--primary);opacity:.35;animation:fp linear infinite}
     @keyframes fp{0%{transform:translateY(100vh);opacity:0}10%{opacity:.55}90%{opacity:.55}100%{transform:translateY(-80px);opacity:0}}
@@ -431,7 +432,7 @@
 #ecopower-videos {
   background: var(--eco-dark);
   padding: 80px 0 60px;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .videos-header {
@@ -442,23 +443,24 @@
 
 .videos-eyebrow {
   display: inline-block;
-  background: linear-gradient(135deg, var(--eco-green), var(--eco-yellow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Barlow Condensed', sans-serif;
+  background: var(--primary-pale);
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-size: .72rem;
+  letter-spacing: .15em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
 }
 
 .videos-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
   color: var(--eco-text);
-  line-height: 1.1;
+  line-height: 1.2;
   margin: 0 0 16px;
 }
 
@@ -468,10 +470,11 @@
 
 .videos-subtitle {
   color: var(--eco-text-muted);
-  font-size: 16px;
+  font-size: 1rem;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 /* ---- ABAS ---- */
@@ -490,8 +493,8 @@
   border-radius: 50px;
   background: transparent;
   color: var(--eco-text-muted);
-  font-family: 'Barlow', sans-serif;
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .82rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -624,8 +627,8 @@
 }
 
 .video-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .92rem;
   font-weight: 700;
   color: var(--eco-text);
   line-height: 1.3;
@@ -633,10 +636,11 @@
 }
 
 .video-desc {
-  font-size: 13px;
+  font-size: .8rem;
   color: var(--eco-text-muted);
   line-height: 1.5;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ---- CONTROLES ---- */
@@ -751,8 +755,8 @@
 }
 
 .video-modal-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--eco-text);
   margin: 0;
@@ -784,7 +788,7 @@
 #ecopower-mapa {
   background: var(--eco-dark-2);
   padding: 80px 0;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .mapa-container {
@@ -798,9 +802,9 @@
 }
 
 .mapa-info h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
   color: var(--eco-text);
   margin: 0 0 8px;
 }
@@ -865,7 +869,7 @@
 #ecopower-contato {
   background: var(--eco-dark);
   padding: 80px 0;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contato-container {
@@ -876,9 +880,9 @@
 }
 
 .contato-container h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
   color: var(--eco-text);
   margin: 0 0 12px;
 }
@@ -926,8 +930,8 @@
   border-radius: 10px;
   padding: 12px 16px;
   color: var(--eco-text);
-  font-family: 'Barlow', sans-serif;
-  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .88rem;
   transition: border-color 0.25s ease;
   outline: none;
 }
@@ -956,19 +960,23 @@
 
 .btn-submit {
   width: 100%;
-  padding: 16px;
-  background: linear-gradient(135deg, var(--eco-green), var(--eco-green-dark));
+  padding: 15px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-mid));
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
   color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .98rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: .04em;
   cursor: pointer;
   transition: all 0.25s ease;
   margin-top: 8px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .btn-submit:hover {
@@ -1070,7 +1078,6 @@
   <a href="#servicos" onclick="closeMobile()">Serviços</a>
   <a href="#weg" onclick="closeMobile()">Tecnologia WEG</a>
   <a href="#projetos" onclick="closeMobile()">Projetos</a>
-  <a href="#contato" onclick="closeMobile()">Contato</a>
   <a href="#ecopower-videos" onclick="closeMobile()">Vídeos</a>
   <a href="#ecopower-mapa" onclick="closeMobile()">Localização</a>
   <a href="#ecopower-contato" onclick="closeMobile()">Orçamento</a>
@@ -1109,7 +1116,11 @@
      ║           HERO              ║
      ╚══════════════════════════════╝ -->
 <section class="hero" id="inicio">
-  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-bg" id="heroBg">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
     <div class="hero-badge"><i class="fa fa-star"></i>&nbsp; Unidade Franqueada · Rede EcoPower Nacional · Araraquara/SP</div>
@@ -1140,6 +1151,49 @@
   </div>
   <div class="hero-scroll"><a href="#sobre"><i class="fa fa-chevron-down"></i></a></div>
 </section>
+
+<!-- ╔══════════════════════════════╗
+     ║       SEÇÃO DE VÍDEOS       ║
+     ╚══════════════════════════════╝ -->
+<section id="ecopower-videos">
+  <div class="videos-header">
+    <div class="videos-eyebrow">Conteúdo EcoPower</div>
+    <h1 class="videos-title">Conheça a <span>EcoPower</span><br>em detalhes</h1>
+    <p class="videos-subtitle">Depoimentos reais, projetos realizados e tudo que você precisa saber antes de investir em energia solar.</p>
+  </div>
+
+  <div class="videos-tabs">
+    <button class="tab-btn active" onclick="filterVideos('todos')">Todos</button>
+    <button class="tab-btn" onclick="filterVideos('institucional')">Institucional</button>
+    <button class="tab-btn" onclick="filterVideos('depoimento')">Depoimentos</button>
+    <button class="tab-btn" onclick="filterVideos('seguranca')">Por que EcoPower?</button>
+  </div>
+
+  <div class="videos-carousel-wrapper">
+    <div class="videos-track-container">
+      <div class="videos-track" id="videosTrack"></div>
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-btn" id="btnPrev" onclick="slideCarousel(-1)">&#8592;</button>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <button class="carousel-btn" id="btnNext" onclick="slideCarousel(1)">&#8594;</button>
+  </div>
+</section>
+
+<!-- Modal de vídeo -->
+<div class="video-modal-backdrop" id="videoModal" onclick="closeModal(event)">
+  <div class="video-modal">
+    <div class="video-modal-player">
+      <iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="video-modal-info">
+      <p class="video-modal-title" id="modalTitle"></p>
+      <button class="modal-close" onclick="closeModalBtn()">&#10005;</button>
+    </div>
+  </div>
+</div>
 
 <!-- ╔══════════════════════════════╗
      ║        TRUST BAR            ║
@@ -1553,42 +1607,6 @@
 </section>
 
 <!-- ╔══════════════════════════════╗
-     ║       COVERAGE AREA         ║
-     ╚══════════════════════════════╝ -->
-<section class="coverage" id="cobertura">
-  <div class="container">
-    <div class="coverage-inner">
-      <div class="reveal-left">
-        <span class="section-tag">Área de Atuação</span>
-        <h2 class="section-title">Araraquara e região — 16 cidades atendidas</h2>
-        <p style="color:var(--primary-dark);font-size:.9rem;margin-top:12px;line-height:1.7">Nossa equipe atende toda a região central de São Paulo com agilidade, suporte local e a qualidade da maior rede solar do Brasil.</p>
-        <div class="coverage-cities">
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Araraquara</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> São Carlos</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Américo Brasiliense</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Ibaté</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Boa Esperança do Sul</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Bocaina</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Trabiju</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Dourado</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Ribeirão Bonito</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Santa Lúcia</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Rincão</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Guatapará</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Motuca</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Barra Bonita</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Bariri</span>
-          <span class="city-tag"><i class="fa fa-location-dot"></i> Gavião Peixoto</span>
-        </div>
-      </div>
-      <div class="coverage-map reveal-right">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117935.35!2d-48.22!3d-21.79!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8fc6e7d54c9b1%3A0x13a69e7c8a7b1e2c!2sAraraquara%2C%20SP!5e0!3m2!1spt-BR!2sbr" title="Mapa EcoPower Araraquara" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ╔══════════════════════════════╗
      ║       TESTIMONIALS          ║
      ╚══════════════════════════════╝ -->
 <section class="testimonials" id="depoimentos">
@@ -1645,101 +1663,127 @@
     <p class="cta-sub reveal">Solicite um orçamento gratuito agora e descubra quanto você pode economizar.</p>
     <div class="cta-actions">
       <a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento%20gratuito!%20Pode%20me%20ajudar%3F" class="btn-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp Agora</a>
-      <a href="#contato" class="btn-white"><i class="fa fa-envelope"></i> Enviar Mensagem</a>
+      <a href="#ecopower-contato" class="btn-white"><i class="fa fa-envelope"></i> Solicitar Orçamento</a>
     </div>
   </div>
 </section>
 
 <!-- ╔══════════════════════════════╗
-     ║          CONTACT            ║
+     ║       LOCALIZAÇÃO           ║
      ╚══════════════════════════════╝ -->
-<section class="contact" id="contato">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="reveal-left">
-        <span class="section-tag">Contato</span>
-        <h2 class="section-title">Fale com nossa equipe</h2>
-        <p class="section-subtitle">Estamos prontos para elaborar o projeto ideal para a sua necessidade.</p>
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
-            <div>
-              <h4>WhatsApp</h4>
-              <a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara!" target="_blank">(16) 3357-4701</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon"><i class="fa fa-location-dot"></i></div>
-            <div>
-              <h4>Endereço</h4>
-              <p>Av. Octaviano de Arruda Campos, 921<br>Jardim Tabapuã — Araraquara/SP</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon"><i class="fa fa-clock"></i></div>
-            <div>
-              <h4>Horário de Atendimento</h4>
-              <p>Segunda a Sexta: 8h às 18h</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon"><i class="fab fa-instagram"></i></div>
-            <div>
-              <h4>Instagram</h4>
-              <a href="https://www.instagram.com/ecopowerararaquara/" target="_blank">@ecopowerararaquara</a>
-            </div>
-          </div>
+<section id="ecopower-mapa">
+  <div class="mapa-container">
+    <div class="mapa-info">
+      <div class="videos-eyebrow">Onde Estamos</div>
+      <h2>Venha nos <span>visitar</span></h2>
+      <p>Nossa equipe está pronta para atender você presencialmente e apresentar as melhores soluções em energia solar para sua necessidade.</p>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon"><i class="fa fa-location-dot" style="color:#fff;font-size:16px"></i></div>
+        <div class="mapa-detail-text">
+          <strong>Endereço</strong>
+          <span>Av. Octaviano de Arruda Campos, 921<br>Jardim Tabapuã — Araraquara/SP</span>
         </div>
       </div>
-      <div class="cform reveal-right">
-        <h3>Solicite seu orçamento gratuito</h3>
-        <p>Preencha o formulário e entraremos em contato em até 24 horas.</p>
-        <form id="contactForm" onsubmit="submitForm(event)">
-          <div class="form-row">
-            <div class="fg">
-              <label>Nome completo *</label>
-              <input type="text" placeholder="Seu nome" required>
-            </div>
-            <div class="fg">
-              <label>Telefone / WhatsApp *</label>
-              <input type="tel" placeholder="(16) 9 9999-9999" required>
-            </div>
-          </div>
-          <div class="fg">
-            <label>E-mail</label>
-            <input type="email" placeholder="seu@email.com.br">
-          </div>
-          <div class="fg">
-            <label>Tipo de projeto *</label>
-            <select required>
-              <option value="">Selecione...</option>
-              <option>Residencial</option>
-              <option>Comercial</option>
-              <option>Rural / Agronegócio</option>
-              <option>Industrial</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>Valor médio da conta de luz *</label>
-            <select required>
-              <option value="">Selecione...</option>
-              <option>Até R$ 300</option>
-              <option>R$ 300 – R$ 700</option>
-              <option>R$ 700 – R$ 1.500</option>
-              <option>R$ 1.500 – R$ 5.000</option>
-              <option>Acima de R$ 5.000</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>Mensagem</label>
-            <textarea placeholder="Conte mais sobre o seu projeto..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit"><i class="fa fa-paper-plane"></i> Enviar Mensagem</button>
-        </form>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon"><i class="fab fa-whatsapp" style="color:#fff;font-size:16px"></i></div>
+        <div class="mapa-detail-text">
+          <strong>Telefone / WhatsApp</strong>
+          <span>(16) 3357-4701</span>
+        </div>
       </div>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon"><i class="fa fa-envelope" style="color:#fff;font-size:16px"></i></div>
+        <div class="mapa-detail-text">
+          <strong>E-mail</strong>
+          <span>flavio.araraquara@ecopowerfranquia.com.br</span>
+        </div>
+      </div>
+
+      <div class="mapa-detail">
+        <div class="mapa-icon"><i class="fa fa-clock" style="color:#fff;font-size:16px"></i></div>
+        <div class="mapa-detail-text">
+          <strong>Horário de Atendimento</strong>
+          <span>Seg–Sex: 8h às 18h | Sáb: 8h às 12h</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mapa-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.5!2d-48.1759!3d-21.7939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.+Octaviano+de+Arruda+Campos%2C+921+-+Jardim+Tabapuã%2C+Araraquara+-+SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização EcoPower Araraquara">
+      </iframe>
     </div>
   </div>
 </section>
+
+<!-- ╔══════════════════════════════╗
+     ║   FORMULÁRIO DE ORÇAMENTO   ║
+     ╚══════════════════════════════╝ -->
+<section id="ecopower-contato">
+  <div class="contato-container">
+    <div class="videos-eyebrow">Fale Conosco</div>
+    <h2>Solicite seu <span>orçamento grátis</span></h2>
+    <p>Preencha o formulário e nossa equipe entrará em contato em até 24 horas com a melhor proposta para você.</p>
+
+    <form id="contatoForm" action="https://formspree.io/f/xzdoqpqz" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="tel" name="whatsapp" placeholder="(16) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" name="email" placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label>Tipo de projeto</label>
+          <select name="tipo">
+            <option value="">Selecione...</option>
+            <option>Residencial</option>
+            <option>Comercial</option>
+            <option>Rural / Agronegócio</option>
+            <option>Industrial</option>
+            <option>Moto Elétrica</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Mensagem (opcional)</label>
+          <textarea name="mensagem" placeholder="Conte um pouco sobre seu projeto ou dúvida..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit"><i class="fa fa-paper-plane"></i> Quero meu orçamento gratuito</button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.
+    </div>
+  </div>
+</section>
+
+<!-- Botão WhatsApp flutuante -->
+<div class="whatsapp-float">
+  <div class="whatsapp-bubble">Fale agora pelo WhatsApp</div>
+  <a class="whatsapp-btn"
+     href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento!"
+     target="_blank"
+     rel="noopener"
+     title="Falar no WhatsApp"
+     onclick="gtag('event', 'whatsapp_click', {'event_category': 'CTA', 'event_label': 'Floating Button'})">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
 
 <!-- ╔══════════════════════════════╗
      ║           FOOTER            ║
@@ -1778,7 +1822,7 @@
           <li><a href="#servicos"><i class="fa fa-chevron-right" style="font-size:.6rem"></i> Solar Rural</a></li>
           <li><a href="#servicos"><i class="fa fa-chevron-right" style="font-size:.6rem"></i> Solar Industrial</a></li>
           <li><a href="#como-funciona"><i class="fa fa-chevron-right" style="font-size:.6rem"></i> Como Funciona</a></li>
-          <li><a href="#contato"><i class="fa fa-chevron-right" style="font-size:.6rem"></i> Orçamento Grátis</a></li>
+          <li><a href="#ecopower-contato"><i class="fa fa-chevron-right" style="font-size:.6rem"></i> Orçamento Grátis</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1800,20 +1844,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ╔══════════════════════════════╗
-     ║     WHATSAPP FAB BUTTON     ║
-     ╚══════════════════════════════╝ -->
-<div class="wpp-fab">
-  <div class="wpp-bubble">
-    <strong>Fale com a gente! 👋</strong>
-    Orçamento gratuito pelo WhatsApp
-  </div>
-  <a href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento%20gratuito!%20Pode%20me%20ajudar%3F"
-     class="wpp-btn" target="_blank" aria-label="Falar no WhatsApp da EcoPower">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
 
 <!-- ╔══════════════════════════════╗
      ║         JAVASCRIPT          ║
@@ -1885,180 +1915,29 @@
 </script>
 
 <!-- ================================================================
-     ✅ SEÇÃO VÍDEOS COM CARROSSEL POR CATEGORIAS
-     ================================================================ -->
-<section id="ecopower-videos">
-  <div class="videos-header">
-    <div class="videos-eyebrow">▶ Conteúdo EcoPower</div>
-    <h1 class="videos-title">Conheça a <span>EcoPower</span><br>em detalhes</h1>
-    <p class="videos-subtitle">Depoimentos reais, projetos realizados e tudo que você precisa saber antes de investir em energia solar.</p>
-  </div>
-
-  <!-- Abas de categoria -->
-  <div class="videos-tabs">
-    <button class="tab-btn active" onclick="filterVideos('todos')">🎬 Todos</button>
-    <button class="tab-btn" onclick="filterVideos('institucional')">🏢 Institucional</button>
-    <button class="tab-btn" onclick="filterVideos('depoimento')">⭐ Depoimentos</button>
-    <button class="tab-btn" onclick="filterVideos('seguranca')">🔒 Por que EcoPower?</button>
-  </div>
-
-  <!-- Carrossel -->
-  <div class="videos-carousel-wrapper">
-    <div class="videos-track-container">
-      <div class="videos-track" id="videosTrack"></div>
-    </div>
-  </div>
-
-  <!-- Controles -->
-  <div class="carousel-controls">
-    <button class="carousel-btn" id="btnPrev" onclick="slideCarousel(-1)">&#8592;</button>
-    <div class="carousel-dots" id="carouselDots"></div>
-    <button class="carousel-btn" id="btnNext" onclick="slideCarousel(1)">&#8594;</button>
-  </div>
-</section>
-
-<!-- Modal de vídeo -->
-<div class="video-modal-backdrop" id="videoModal" onclick="closeModal(event)">
-  <div class="video-modal">
-    <div class="video-modal-player">
-      <iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-modal-info">
-      <p class="video-modal-title" id="modalTitle"></p>
-      <button class="modal-close" onclick="closeModalBtn()">✕</button>
-    </div>
-  </div>
-</div>
-
-<!-- ================================================================
-     ✅ SEÇÃO GOOGLE MAPS + INFORMAÇÕES DE CONTATO
-     ================================================================ -->
-<section id="ecopower-mapa">
-  <div class="mapa-container">
-    <div class="mapa-info">
-      <div class="videos-eyebrow">📍 Onde Estamos</div>
-      <h2>Venha nos <span>visitar</span></h2>
-      <p>Nossa equipe está pronta para atender você presencialmente e apresentar as melhores soluções em energia solar para sua necessidade.</p>
-
-      <div class="mapa-detail">
-        <div class="mapa-icon">📍</div>
-        <div class="mapa-detail-text">
-          <strong>Endereço</strong>
-          <span>Av. Octaviano de Arruda Campos, 921<br>Jardim Tabapuã — Araraquara/SP</span>
-        </div>
-      </div>
-
-      <div class="mapa-detail">
-        <div class="mapa-icon">📞</div>
-        <div class="mapa-detail-text">
-          <strong>Telefone / WhatsApp</strong>
-          <span>(16) 3357-4701</span>
-        </div>
-      </div>
-
-      <div class="mapa-detail">
-        <div class="mapa-icon">✉️</div>
-        <div class="mapa-detail-text">
-          <strong>E-mail</strong>
-          <span>flavio.araraquara@ecopowerfranquia.com.br</span>
-        </div>
-      </div>
-
-      <div class="mapa-detail">
-        <div class="mapa-icon">🕐</div>
-        <div class="mapa-detail-text">
-          <strong>Horário de Atendimento</strong>
-          <span>Seg–Sex: 8h às 18h | Sáb: 8h às 12h</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="mapa-embed">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.5!2d-48.1759!3d-21.7939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.+Octaviano+de+Arruda+Campos%2C+921+-+Jardim+Tabapuã%2C+Araraquara+-+SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Localização EcoPower Araraquara">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     ✅ SEÇÃO FORMULÁRIO DE CONTATO (Formspree)
-     ================================================================ -->
-<section id="ecopower-contato">
-  <div class="contato-container">
-    <div class="videos-eyebrow">📩 Fale Conosco</div>
-    <h2>Solicite seu <span>orçamento grátis</span></h2>
-    <p>Preencha o formulário e nossa equipe entrará em contato em até 24 horas com a melhor proposta para você.</p>
-
-    <form id="contatoForm" action="https://formspree.io/f/xzdoqpqz" method="POST">
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Nome completo</label>
-          <input type="text" name="nome" placeholder="Seu nome" required>
-        </div>
-        <div class="form-group">
-          <label>WhatsApp</label>
-          <input type="tel" name="whatsapp" placeholder="(16) 99999-9999" required>
-        </div>
-        <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" name="email" placeholder="seu@email.com">
-        </div>
-        <div class="form-group">
-          <label>Tipo de projeto</label>
-          <select name="tipo">
-            <option value="">Selecione...</option>
-            <option>Residencial</option>
-            <option>Comercial</option>
-            <option>Rural / Agronegócio</option>
-            <option>Industrial</option>
-            <option>Moto Elétrica</option>
-          </select>
-        </div>
-        <div class="form-group full">
-          <label>Mensagem (opcional)</label>
-          <textarea name="mensagem" placeholder="Conte um pouco sobre seu projeto ou dúvida..."></textarea>
-        </div>
-      </div>
-      <button type="submit" class="btn-submit">⚡ Quero meu orçamento gratuito</button>
-    </form>
-    <div class="form-success" id="formSuccess">
-      ✅ Mensagem enviada! Nossa equipe entrará em contato em breve.
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     ✅ BOTÃO WHATSAPP FLUTUANTE
-     ================================================================ -->
-<div class="whatsapp-float">
-  <div class="whatsapp-bubble">💬 Fale agora pelo WhatsApp!</div>
-  <a class="whatsapp-btn"
-     href="https://wa.me/551633574701?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPower%20Araraquara%20e%20gostaria%20de%20um%20or%C3%A7amento!"
-     target="_blank"
-     rel="noopener"
-     title="Falar no WhatsApp"
-     onclick="gtag('event', 'whatsapp_click', {'event_category': 'CTA', 'event_label': 'Floating Button'})">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-</div>
-
-<!-- ================================================================
      JAVASCRIPT — Carrossel de vídeos e formulário Formspree
      ================================================================ -->
 <script>
-// ---- DADOS DOS VÍDEOS ----
+// ---- DADOS DOS VÍDEOS (ordem: Rodeio, Por que EcoPower, Moto, Iquegami, Vidara, Residencial, Rural) ----
 const videos = [
+  {
+    id: 'BwE8lt2mNgU',
+    title: 'Patrocinadora Oficial do Rodeio de Barretos',
+    desc: 'EcoPower presente no maior evento do agronegócio do Brasil.',
+    categoria: 'institucional',
+    badge: 'Institucional'
+  },
   {
     id: 'OALp_csD7FY',
     title: 'Por que ser cliente EcoPower?',
-    desc: 'Entenda os diferenciais e garantias de quem escolhe a EcoPower.',
+    desc: 'Garantias, certificações e processo transparente de ponta a ponta.',
+    categoria: 'seguranca',
+    badge: 'Por que EcoPower?'
+  },
+  {
+    id: 'qhWwEKOynus',
+    title: 'Por que uma moto elétrica Horwin/EcoPower?',
+    desc: 'Conheça as vantagens da mobilidade elétrica com a EcoPower.',
     categoria: 'institucional',
     badge: 'Institucional'
   },
@@ -2068,13 +1947,6 @@ const videos = [
     desc: 'Cliente comercial conta sua experiência com o sistema Grid Zero.',
     categoria: 'depoimento',
     badge: 'Depoimento'
-  },
-  {
-    id: 'qhWwEKOynus',
-    title: 'Por que uma moto elétrica Horwin/EcoPower?',
-    desc: 'Conheça as vantagens da mobilidade elétrica com a EcoPower.',
-    categoria: 'institucional',
-    badge: 'Institucional'
   },
   {
     id: 'NYscuw7E8IE',
@@ -2096,20 +1968,6 @@ const videos = [
     desc: 'Como a energia solar transformou a produção no campo.',
     categoria: 'depoimento',
     badge: 'Depoimento'
-  },
-  {
-    id: 'BwE8lt2mNgU',
-    title: 'Patrocinadora Oficial do Rodeio de Barretos',
-    desc: 'EcoPower presente no maior evento do agronegócio do Brasil.',
-    categoria: 'institucional',
-    badge: 'Institucional'
-  },
-  {
-    id: 'OALp_csD7FY',
-    title: 'Segurança em comprar com a EcoPower',
-    desc: 'Garantias, certificações e processo transparente de ponta a ponta.',
-    categoria: 'seguranca',
-    badge: 'Por que EcoPower?'
   }
 ];
 
@@ -2221,7 +2079,7 @@ function closeModalBtn() {
 document.getElementById('contatoForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('.btn-submit');
-  btn.textContent = 'Enviando...';
+  btn.innerHTML = 'Enviando...';
   btn.disabled = true;
   try {
     const res = await fetch(this.action, {
@@ -2234,12 +2092,12 @@ document.getElementById('contatoForm').addEventListener('submit', async function
       document.getElementById('formSuccess').style.display = 'block';
       gtag('event', 'form_submit', {'event_category': 'Lead', 'event_label': 'Contato Orcamento'});
     } else {
-      btn.textContent = '⚡ Quero meu orçamento gratuito';
+      btn.innerHTML = '<i class="fa fa-paper-plane"></i> Quero meu orçamento gratuito';
       btn.disabled = false;
       alert('Erro ao enviar. Tente novamente.');
     }
   } catch {
-    btn.textContent = '⚡ Quero meu orçamento gratuito';
+    btn.innerHTML = '<i class="fa fa-paper-plane"></i> Quero meu orçamento gratuito';
     btn.disabled = false;
     alert('Erro ao enviar. Tente novamente.');
   }
