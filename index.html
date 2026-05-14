@@ -382,6 +382,14 @@
       .about-stack{height:310px}
       .hero-stats{gap:24px}
       .wpp-fab{bottom:18px;right:18px}
+      /* Regra geral de imagens no mobile */
+      img{max-width:100%;height:auto}
+      /* Exibe a imagem WEG que fica oculta em tablets */
+      .weg-visual{display:block}
+      .weg-img{width:100%;height:auto;object-fit:cover}
+      .weg-logo-badge{position:static;margin-top:12px;align-self:flex-start}
+      /* Oculta tooltip do WhatsApp flutuante no mobile */
+      .whatsapp-bubble{display:none}
     }
     @media(max-width:480px){
       .hero-actions,.cta-actions{flex-direction:column;align-items:flex-start}
@@ -398,6 +406,8 @@
     /* ── REDE ECOPOWER NACIONAL ── */
     .rede{background:var(--primary-dark);padding:80px 0;position:relative;overflow:hidden}
     .rede::before{content:'';position:absolute;inset:0;background:url('balao-ecopower.jpg') center 20%/80% auto no-repeat;opacity:.25;z-index:0}
+    /* Imagem do balão visível apenas no mobile — oculta no desktop (usa o ::before) */
+    .rede-balao-mobile{display:none;width:100%;height:300px;object-fit:cover;object-position:center}
     .rede .container{position:relative;z-index:1}
     .rede-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
     .rede-label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
@@ -417,6 +427,12 @@
       .rede-inner{grid-template-columns:1fr;gap:36px}
       .rede-numbers{grid-template-columns:1fr 1fr}
       .franchise-banner{font-size:.68rem;gap:8px}
+      /* Exibe balão como imagem real no mobile — ocupa 100% da largura, texto abaixo */
+      .rede-balao-mobile{display:block}
+      /* Remove o pseudo-elemento de fundo no mobile (a imagem real já aparece) */
+      .rede::before{display:none}
+      /* Garante que o padding do topo some para colar com a imagem */
+      .rede{padding-top:0}
     }
 
     /* ── MOBILIDADE ELÉTRICA HORWIN ── */
@@ -1291,6 +1307,7 @@
      ║     REDE ECOPOWER NACIONAL  ║
      ╚══════════════════════════════╝ -->
 <section class="rede">
+  <img src="balao-ecopower.jpg" class="rede-balao-mobile" alt="EcoPower — balão evento">
   <div class="container">
     <div class="rede-inner">
       <div class="reveal-left">
