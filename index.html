@@ -125,7 +125,7 @@
 
     /* ── HERO ── */
     .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
-    #hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    #hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
     .hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
     .particle{position:absolute;border-radius:50%;background:var(--primary);opacity:.35;animation:fp linear infinite}
     @keyframes fp{0%{transform:translateY(100vh);opacity:0}10%{opacity:.55}90%{opacity:.55}100%{transform:translateY(-80px);opacity:0}}
@@ -382,6 +382,7 @@
       .about-stack{height:310px}
       .hero-stats{gap:24px}
       .wpp-fab{bottom:18px;right:18px}
+      #hero-video{object-position:60% center}
       /* Regra geral de imagens no mobile */
       img{max-width:100%;height:auto}
       /* Exibe a imagem WEG que fica oculta em tablets */
